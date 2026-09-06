@@ -80,29 +80,25 @@ main {
 
     min-width: 190px;
 
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-
     border-radius: 50%;
 
-    background:
-        linear-gradient(
-            135deg,
-            #eef1fa,
-            #f3eee5
-        );
+    overflow: hidden;
+
+    background-color: #eef1fa;
 
     border: 3px solid #ffffff;
 
     box-shadow:
         0 0 0 2px #d8c8a5;
+}
 
-    color: #b59a63;
+.foto-principal img {
+    width: 100%;
+    height: 100%;
 
-    font-size: 14px;
-    font-weight: bold;
+    object-fit: cover;
+
+    display: block;
 }
 
 
@@ -233,7 +229,7 @@ main {
 .contenedor-servicios {
     display: grid;
 
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 
     gap: 25px;
 }
@@ -274,23 +270,26 @@ main {
 .imagen-servicio {
     height: 210px;
 
-    display: flex;
+    overflow: hidden;
 
-    justify-content: center;
-    align-items: center;
+    background-color: #eef1fa;
+}
 
-    background:
-        linear-gradient(
-            135deg,
-            #eef1fa,
-            #f3eee5
-        );
+.imagen-servicio img {
+    width: 100%;
+    height: 100%;
 
-    color: #b59a63;
+    object-fit: cover;
 
-    font-size: 14px;
+    display: block;
 
-    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+/* Pequeño efecto al pasar el mouse */
+
+.tarjeta-servicio:hover .imagen-servicio img {
+    transform: scale(1.03);
 }
 
 
@@ -343,9 +342,8 @@ main {
     .perfil {
         align-items: flex-start;
     }
-
     .contenedor-servicios {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -353,7 +351,10 @@ main {
 /* ---------- RESPONSIVE CELULAR ---------- */
 
 @media (max-width: 650px) {
-
+    
+    .contenedor-servicios {
+        grid-template-columns: 1fr;
+    }
     main {
         width: 92%;
 

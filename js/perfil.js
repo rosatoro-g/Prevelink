@@ -12,7 +12,10 @@ if (servicioGuardado) {
 
     nuevaTarjeta.innerHTML = `
         <div class="imagen-servicio">
-            Imagen
+            <img
+                src="img/servicio-cine.jpg"
+                alt="Salida al cine"
+            >
         </div>
 
         <div class="informacion-servicio">
