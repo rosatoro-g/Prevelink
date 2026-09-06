@@ -1,0 +1,270 @@
+/* ---------- CONFIGURACIÓN GENERAL ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f4f8;
+    color: #2b2530;
+}
+
+
+/* ---------- NAVBAR ---------- */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 60px;
+
+    background-color: #ffffff;
+
+    border-bottom: 1px solid #e4dde7;
+}
+
+.logo a {
+    font-size: 26px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #7a4b7d;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: #4a414d;
+    font-size: 15px;
+}
+
+.navbar-links a:hover {
+    color: #7a4b7d;
+}
+
+
+/* ---------- CONTENIDO PRINCIPAL ---------- */
+
+main {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+
+/* ---------- BIENVENIDA ---------- */
+
+.bienvenida {
+    margin-bottom: 30px;
+}
+
+.bienvenida h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.bienvenida p {
+    color: #716a73;
+}
+
+
+/* ---------- BUSCADOR ---------- */
+
+.busqueda {
+    display: flex;
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+.busqueda input {
+    width: 100%;
+    max-width: 500px;
+
+    padding: 14px;
+
+    border: 1px solid #d5ccd8;
+    border-radius: 10px;
+
+    font-size: 15px;
+}
+
+.busqueda button {
+    padding: 14px 24px;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: #7a4b7d;
+    color: white;
+
+    cursor: pointer;
+}
+
+
+/* ---------- FILTROS ---------- */
+
+.filtros {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    margin-bottom: 40px;
+}
+
+.filtros button {
+    padding: 10px 18px;
+
+    border: 1px solid #d5ccd8;
+    border-radius: 20px;
+
+    background-color: white;
+    color: #4a414d;
+
+    cursor: pointer;
+}
+
+.filtros button:hover {
+    background-color: #7a4b7d;
+    color: white;
+}
+
+
+/* ---------- FEED ---------- */
+
+.feed h2 {
+    margin-bottom: 25px;
+}
+
+
+/* Contenedor donde aparecen las tarjetas */
+
+.contenedor-perfiles {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* ---------- TARJETA DE PERFIL ---------- */
+
+.tarjeta-perfil {
+    background-color: white;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Lugar temporal para las fotografías */
+
+.foto-perfil {
+    height: 220px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #e7dce9;
+
+    color: #7a4b7d;
+}
+
+
+/* Información de cada trabajadora */
+
+.informacion-perfil {
+    padding: 20px;
+}
+
+.informacion-perfil h3 {
+    font-size: 22px;
+
+    margin-bottom: 10px;
+}
+
+.informacion-perfil p {
+    margin-bottom: 8px;
+}
+
+.descripcion {
+    color: #716a73;
+
+    margin-top: 15px;
+}
+
+
+/* Botón Ver perfil */
+
+.informacion-perfil a {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 10px 18px;
+
+    border-radius: 8px;
+
+    background-color: #7a4b7d;
+
+    color: white;
+
+    text-decoration: none;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+#footer {
+    margin-top: 50px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    background-color: #ffffff;
+
+    color: #716a73;
+
+    border-top: 1px solid #e4dde7;
+}
+
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        padding: 20px;
+    }
+
+    .navbar-links {
+        gap: 15px;
+    }
+
+    .contenedor-perfiles {
+        grid-template-columns: 1fr;
+    }
+
+    .busqueda {
+        flex-direction: column;
+    }
+
+    .busqueda input {
+        max-width: none;
+    }
+}

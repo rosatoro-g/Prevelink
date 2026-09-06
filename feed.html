@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PrivéLink | Feed</title>
+
+    <!-- CSS exclusivo de esta página -->
+    <link rel="stylesheet" href="css/feed.css">
+</head>
+
+<body>
+
+    <!--
+        Aquí más adelante aparecerá el navbar.
+        Lo crearemos desde layout.js.
+    -->
+    <header id="navbar"></header>
+
+
+    <main>
+
+        <!-- PRESENTACIÓN DEL FEED -->
+        <section class="bienvenida">
+
+            <h1>Explora perfiles</h1>
+
+            <p>
+                Encuentra perfiles según tus preferencias.
+            </p>
+
+        </section>
+
+
+        <!-- BUSCADOR -->
+        <section class="busqueda">
+
+            <input
+                type="search"
+                placeholder="Buscar por nombre o ubicación"
+            >
+
+            <button type="button">
+                Buscar
+            </button>
+
+        </section>
+
+
+        <!-- FILTROS VISUALES -->
+        <section class="filtros">
+
+            <button type="button">Todas</button>
+
+            <button type="button">Valdivia</button>
+
+            <button type="button">Temuco</button>
+
+            <button type="button">Más recientes</button>
+
+        </section>
+
+
+        <!-- SECCIÓN PRINCIPAL DEL FEED -->
+        <section class="feed">
+
+            <h2>Perfiles</h2>
+
+
+            <div class="contenedor-perfiles">
+
+
+                <!-- PERFIL 1 -->
+                <article class="tarjeta-perfil">
+
+                    <div class="foto-perfil">
+                        <p>Foto</p>
+                    </div>
+
+                    <div class="informacion-perfil">
+
+                        <h3>Sofía</h3>
+
+                        <p>25 años</p>
+
+                        <p>Valdivia</p>
+
+                        <p class="descripcion">
+                            Música, viajes y buenas conversaciones.
+                        </p>
+
+                        <a href="#">
+                            Ver perfil
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PERFIL 2 -->
+                <article class="tarjeta-perfil">
+
+                    <div class="foto-perfil">
+                        <p>Foto</p>
+                    </div>
+
+                    <div class="informacion-perfil">
+
+                        <h3>Amanda</h3>
+
+                        <p>27 años</p>
+
+                        <p>Valdivia</p>
+
+                        <p class="descripcion">
+                            Fotografía, eventos y nuevos lugares.
+                        </p>
+
+                        <a href="#">
+                            Ver perfil
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PERFIL 3 -->
+                <article class="tarjeta-perfil">
+
+                    <div class="foto-perfil">
+                        <p>Foto</p>
+                    </div>
+
+                    <div class="informacion-perfil">
+
+                        <h3>Emilia</h3>
+
+                        <p>24 años</p>
+
+                        <p>Temuco</p>
+
+                        <p class="descripcion">
+                            Cine, gastronomía y viajes.
+                        </p>
+
+                        <a href="#">
+                            Ver perfil
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!--
+        Aquí más adelante aparecerá el footer.
+        También vendrá desde layout.js.
+    -->
+    <footer id="footer"></footer>
+
+
+    <!-- Más adelante usaremos este archivo para navbar y footer -->
+    <script src="js/layout.js"></script>
+
+</body>
+
+</html>
