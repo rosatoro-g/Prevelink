@@ -9,33 +9,77 @@
 
     background-color: #ffffff;
 
-    border-bottom: 1px solid #e4dde7;
+    border-top: 3px solid #b59a63;
+    border-bottom: 1px solid #e2e0db;
 }
 
+
+/* ---------- LOGO ---------- */
+
 .logo a {
-    font-size: 26px;
-    font-weight: bold;
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 27px;
+    font-weight: normal;
+
+    letter-spacing: 1px;
 
     text-decoration: none;
 
-    color: #7a4b7d;
+    color: #243b78;
 }
+
+
+/* ---------- LINKS DEL NAVBAR ---------- */
 
 .navbar-links {
     display: flex;
+    align-items: center;
+
     gap: 30px;
 }
 
 .navbar-links a {
+    position: relative;
+
+    padding: 6px 0;
+
+    font-family: "Trebuchet MS", Arial, sans-serif;
+
+    font-size: 14px;
+
     text-decoration: none;
 
-    color: #4a414d;
+    color: #505158;
 
-    font-size: 15px;
+    transition: color 0.2s ease;
 }
 
 .navbar-links a:hover {
-    color: #7a4b7d;
+    color: #243b78;
+}
+
+
+/* Línea dorada al pasar sobre un enlace */
+
+.navbar-links a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 2px;
+
+    background-color: #b59a63;
+
+    transition: width 0.2s ease;
+}
+
+.navbar-links a:hover::after {
+    width: 100%;
 }
 
 
@@ -44,27 +88,70 @@
 #footer {
     margin-top: 50px;
 
-    padding: 30px;
-
-    text-align: center;
+    padding: 30px 60px;
 
     background-color: #ffffff;
 
-    color: #716a73;
+    border-top: 1px solid #e2e0db;
+}
 
-    border-top: 1px solid #e4dde7;
+.footer-contenido {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 1150px;
+
+    margin: 0 auto;
+}
+
+.footer-logo {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 20px;
+
+    color: #b59a63;
+}
+
+.footer-contenido p {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+
+    font-size: 12px;
+
+    color: #77787d;
 }
 
 
-/* ---------- RESPONSIVE DEL LAYOUT ---------- */
+/* ---------- RESPONSIVE ---------- */
 
 @media (max-width: 700px) {
 
     .navbar {
-        padding: 20px;
+        padding: 18px 20px;
     }
 
     .navbar-links {
         gap: 15px;
+    }
+
+    .logo a {
+        font-size: 22px;
+    }
+
+    .navbar-links a {
+        font-size: 12px;
+    }
+
+    #footer {
+        padding: 25px 20px;
+    }
+
+    .footer-contenido {
+        flex-direction: column;
+
+        gap: 10px;
+
+        text-align: center;
     }
 }

@@ -27,10 +27,11 @@
         <!-- PRESENTACIÓN DEL FEED -->
         <section class="bienvenida">
 
-            <h1>Explora perfiles</h1>
+            <h1>Encuentra la compañía ideal para cada ocasión</h1>
 
             <p>
-                Encuentra perfiles según tus preferencias.
+                Explora perfiles, conoce sus servicios y encuentra opciones
+                según tu ubicación, presupuesto y preferencias.
             </p>
 
         </section>
@@ -41,7 +42,7 @@
 
             <input
                 type="search"
-                placeholder="Buscar por nombre o ubicación"
+                placeholder="Buscar por nombre, servicio o ubicación..."
             >
 
             <button type="button">
@@ -50,29 +51,137 @@
 
         </section>
 
+    <!-- FILTROS DEL FEED -->
+    <section class="filtros">
 
-        <!-- FILTROS VISUALES -->
-        <section class="filtros">
+        <!-- Tipo de servicio -->
+        <div class="grupo-filtro">
 
-            <button type="button">Todas</button>
+            <label for="filtro-servicio">
+                Tipo de servicio
+            </label>
 
-            <button type="button">Valdivia</button>
+            <select id="filtro-servicio">
 
-            <button type="button">Temuco</button>
+                <option value="">
+                    Todos los servicios
+                </option>
 
-            <button type="button">Más recientes</button>
+                <option value="acompanamiento">
+                    Acompañamiento
+                </option>
 
-        </section>
+                <option value="eventos">
+                    Eventos
+                </option>
 
+                <option value="cena">
+                    Cena y compañía
+                </option>
+
+                <option value="experiencias">
+                    Experiencias
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- Precio -->
+        <div class="grupo-filtro">
+
+            <label for="filtro-precio">
+                Rango de precio
+            </label>
+
+            <select id="filtro-precio">
+
+                <option value="">
+                    Cualquier precio
+                </option>
+
+                <option value="30000">
+                    Hasta $30.000
+                </option>
+
+                <option value="50000">
+                    $30.000 - $50.000
+                </option>
+
+                <option value="50001">
+                    Más de $50.000
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- Ubicación -->
+        <div class="grupo-filtro">
+
+            <label for="filtro-ubicacion">
+                Ubicación
+            </label>
+
+            <select id="filtro-ubicacion">
+
+                <option value="">
+                    Todas las ubicaciones
+                </option>
+
+                <option value="valdivia">
+                    Valdivia
+                </option>
+
+                <option value="temuco">
+                    Temuco
+                </option>
+
+                <option value="santiago">
+                    Santiago
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- Disponibilidad -->
+        <div class="grupo-filtro">
+
+            <label for="filtro-disponibilidad">
+                Disponibilidad
+            </label>
+
+            <select id="filtro-disponibilidad">
+
+                <option value="">
+                    Cualquier fecha
+                </option>
+
+                <option value="hoy">
+                    Disponible hoy
+                </option>
+
+                <option value="semana">
+                    Esta semana
+                </option>
+
+            </select>
+
+        </div>
+
+    </section>
 
         <!-- SECCIÓN PRINCIPAL DEL FEED -->
         <section class="feed">
 
-            <h2>Perfiles</h2>
+            <h2>Perfiles destacados</h2>
 
 
             <div class="contenedor-perfiles">
-
 
                 <!-- PERFIL 1 -->
                 <article class="tarjeta-perfil">
@@ -83,14 +192,26 @@
 
                     <div class="informacion-perfil">
 
-                        <h3>Sofía</h3>
+                        <div class="estado-perfil">
+                            Disponible hoy
+                        </div>
 
-                        <p>25 años</p>
+                        <h3>Sofía, 25</h3>
 
-                        <p>Valdivia</p>
+                        <p class="ubicacion-perfil">
+                            📍 Valdivia
+                        </p>
 
                         <p class="descripcion">
                             Música, viajes y buenas conversaciones.
+                        </p>
+
+                        <p class="tipo-servicio">
+                            Acompañamiento · Eventos · Cena
+                        </p>
+
+                        <p class="precio-desde">
+                            Desde $40.000
                         </p>
 
                         <a href="perfil.html">
@@ -111,14 +232,26 @@
 
                     <div class="informacion-perfil">
 
-                        <h3>Amanda</h3>
+                        <div class="estado-perfil">
+                            Disponible esta semana
+                        </div>
 
-                        <p>27 años</p>
+                        <h3>Amanda, 27</h3>
 
-                        <p>Valdivia</p>
+                        <p class="ubicacion-perfil">
+                            📍 Valdivia
+                        </p>
 
                         <p class="descripcion">
                             Fotografía, eventos y nuevos lugares.
+                        </p>
+
+                        <p class="tipo-servicio">
+                            Eventos · Compañía · Experiencias
+                        </p>
+
+                        <p class="precio-desde">
+                            Desde $35.000
                         </p>
 
                         <a href="#">
@@ -139,14 +272,26 @@
 
                     <div class="informacion-perfil">
 
-                        <h3>Emilia</h3>
+                        <div class="estado-perfil">
+                            Disponible hoy
+                        </div>
 
-                        <p>24 años</p>
+                        <h3>Emilia, 24</h3>
 
-                        <p>Temuco</p>
+                        <p class="ubicacion-perfil">
+                            📍 Temuco
+                        </p>
 
                         <p class="descripcion">
                             Cine, gastronomía y viajes.
+                        </p>
+
+                        <p class="tipo-servicio">
+                            Cena · Acompañamiento · Eventos
+                        </p>
+
+                        <p class="precio-desde">
+                            Desde $45.000
                         </p>
 
                         <a href="#">
@@ -156,7 +301,6 @@
                     </div>
 
                 </article>
-
 
             </div>
 

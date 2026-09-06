@@ -11,8 +11,8 @@ class Layout {
                 </div>
 
                 <div class="navbar-links">
-                    <a href="feed.html">Inicio</a>
-                    <a href="#">Mi perfil</a>
+                    <a href="feed.html">Explorar</a>
+                    <a href="perfil.html">Mi perfil</a>
                     <a href="index.html">Cerrar sesión</a>
                 </div>
 
@@ -25,7 +25,17 @@ class Layout {
         const footer = document.getElementById("footer");
 
         footer.innerHTML = `
-            <p>© 2026 PrivéLink</p>
+            <div class="footer-contenido">
+
+                <span class="footer-logo">
+                    PrivéLink
+                </span>
+
+                <p>
+                    © 2026 PrivéLink
+                </p>
+
+            </div>
         `;
     }
 }
