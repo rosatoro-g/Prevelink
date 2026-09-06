@@ -7,114 +7,228 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f7f4f8;
-    color: #2b2530;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+
+    background-color: #f7f6f2;
+
+    color: #25262b;
 }
 
 
-
-/* ---------- CONTENIDO ---------- */
+/* ---------- CONTENIDO PRINCIPAL ---------- */
 
 main {
     width: 90%;
-    max-width: 1100px;
+    max-width: 1150px;
 
     margin: 0 auto;
 
-    padding: 50px 0;
+    padding: 55px 0 80px;
 }
 
 
-/* ---------- PERFIL ---------- */
+/* ---------- INFORMACIÓN PRINCIPAL DEL PERFIL ---------- */
 
 .perfil {
+    position: relative;
+
     display: flex;
+
     align-items: center;
 
-    gap: 35px;
+    gap: 40px;
 
-    padding: 35px;
+    padding: 40px;
 
-    background-color: white;
+    margin-bottom: 55px;
 
-    border-radius: 18px;
+    background-color: #ffffff;
 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    border: 1px solid #e2e0db;
 
-    margin-bottom: 45px;
+    border-radius: 16px;
+
+    box-shadow:
+        0 5px 20px rgba(40, 40, 40, 0.07);
 }
 
+
+/* Línea dorada decorativa */
+
+.perfil::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 40px;
+
+    width: 70px;
+    height: 4px;
+
+    background-color: #b59a63;
+
+    border-radius: 0 0 5px 5px;
+}
+
+
+/* ---------- FOTO PRINCIPAL ---------- */
+
 .foto-principal {
-    width: 180px;
-    height: 180px;
+    width: 190px;
+    height: 190px;
 
-    min-width: 180px;
-
-    border-radius: 50%;
+    min-width: 190px;
 
     display: flex;
+
     justify-content: center;
     align-items: center;
 
-    background-color: #e7dce9;
+    border-radius: 50%;
 
-    color: #7a4b7d;
+    background:
+        linear-gradient(
+            135deg,
+            #eef1fa,
+            #f3eee5
+        );
+
+    border: 3px solid #ffffff;
+
+    box-shadow:
+        0 0 0 2px #d8c8a5;
+
+    color: #b59a63;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* ---------- DATOS DEL PERFIL ---------- */
+
+.datos-perfil {
+    flex: 1;
 }
 
 .datos-perfil h1 {
-    font-size: 32px;
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 42px;
+
+    font-weight: normal;
+
+    color: #243b78;
 
     margin-bottom: 10px;
 }
 
 .ubicacion {
-    color: #7a4b7d;
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    color: #304fa8;
+
+    font-size: 14px;
 
     font-weight: bold;
+}
+
+.datos-perfil > p:not(.ubicacion):not(.descripcion) {
+    color: #5f6066;
 
     margin-bottom: 8px;
 }
 
 .descripcion {
-    max-width: 600px;
+    max-width: 650px;
 
-    margin-top: 15px;
+    margin-top: 16px;
 
-    color: #716a73;
+    color: #70727a;
 
-    line-height: 1.5;
+    font-size: 15px;
+
+    line-height: 1.6;
 }
 
 
-/* ---------- SERVICIOS ---------- */
+/* ---------- SECCIÓN DE SERVICIOS ---------- */
+
+.servicios {
+    margin-top: 20px;
+}
 
 .encabezado-servicios {
     display: flex;
+
     justify-content: space-between;
     align-items: center;
 
-    margin-bottom: 25px;
+    margin-bottom: 28px;
 }
 
 .encabezado-servicios h2 {
-    font-size: 26px;
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 34px;
+
+    font-weight: normal;
+
+    color: #243b78;
 }
+
+
+/* Línea decorativa debajo del título */
+
+.encabezado-servicios h2::after {
+    content: "";
+
+    display: block;
+
+    width: 45px;
+    height: 3px;
+
+    margin-top: 8px;
+
+    background-color: #b59a63;
+
+    border-radius: 5px;
+}
+
+
+/* ---------- BOTÓN AGREGAR SERVICIO ---------- */
 
 .boton-agregar {
     padding: 12px 20px;
 
-    border-radius: 10px;
+    background-color: #304fa8;
 
-    background-color: #7a4b7d;
+    color: #ffffff;
 
-    color: white;
+    border-radius: 9px;
+
+    font-size: 14px;
+
+    font-weight: bold;
 
     text-decoration: none;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.boton-agregar:hover {
+    background-color: #243b78;
+
+    transform: translateY(-1px);
 }
 
 
-/* ---------- TARJETAS DE SERVICIOS ---------- */
+/* ---------- CONTENEDOR DE SERVICIOS ---------- */
 
 .contenedor-servicios {
     display: grid;
@@ -124,72 +238,161 @@ main {
     gap: 25px;
 }
 
+
+/* ---------- TARJETAS DE SERVICIO ---------- */
+
 .tarjeta-servicio {
     overflow: hidden;
 
-    background-color: white;
+    background-color: #ffffff;
 
-    border-radius: 16px;
+    border: 1px solid #e2e0db;
 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    border-radius: 14px;
+
+    box-shadow:
+        0 5px 18px rgba(40, 40, 40, 0.07);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
+.tarjeta-servicio:hover {
+    transform: translateY(-4px);
+
+    border-color: #d8c8a5;
+
+    box-shadow:
+        0 10px 25px rgba(40, 40, 40, 0.10);
+}
+
+
+/* ---------- IMAGEN DEL SERVICIO ---------- */
+
 .imagen-servicio {
-    height: 180px;
+    height: 210px;
 
     display: flex;
+
     justify-content: center;
     align-items: center;
 
-    background-color: #e7dce9;
+    background:
+        linear-gradient(
+            135deg,
+            #eef1fa,
+            #f3eee5
+        );
 
-    color: #7a4b7d;
+    color: #b59a63;
+
+    font-size: 14px;
+
+    font-weight: bold;
 }
 
+
+/* ---------- INFORMACIÓN DEL SERVICIO ---------- */
+
 .informacion-servicio {
-    padding: 20px;
+    padding: 22px;
 }
 
 .informacion-servicio h3 {
+    font-family: Georgia, "Times New Roman", serif;
+
     margin-bottom: 10px;
+
+    color: #25262b;
+
+    font-size: 24px;
+
+    font-weight: normal;
 }
 
 .informacion-servicio p {
-    color: #716a73;
+    color: #70727a;
 
-    line-height: 1.4;
+    font-size: 14px;
+
+    line-height: 1.5;
 }
+
+
+/* ---------- PRECIO ---------- */
 
 .precio {
-    margin-top: 15px;
+    margin-top: 17px;
 
-    font-size: 18px;
+    color: #a2834b !important;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 19px !important;
 
     font-weight: bold;
-
-    color: #7a4b7d !important;
 }
 
 
-/* ---------- RESPONSIVE ---------- */
+/* ---------- RESPONSIVE TABLET ---------- */
 
-@media (max-width: 700px) {
+@media (max-width: 850px) {
 
     .perfil {
-        flex-direction: column;
-
-        text-align: center;
+        align-items: flex-start;
     }
 
     .contenedor-servicios {
         grid-template-columns: 1fr;
     }
+}
+
+
+/* ---------- RESPONSIVE CELULAR ---------- */
+
+@media (max-width: 650px) {
+
+    main {
+        width: 92%;
+
+        padding-top: 35px;
+    }
+
+    .perfil {
+        flex-direction: column;
+
+        padding: 30px 25px;
+
+        text-align: center;
+    }
+
+    .perfil::before {
+        left: 50%;
+
+        transform: translateX(-50%);
+    }
+
+    .foto-principal {
+        margin: 0 auto;
+    }
+
+    .datos-perfil h1 {
+        font-size: 36px;
+    }
 
     .encabezado-servicios {
         flex-direction: column;
 
-        gap: 15px;
-
         align-items: flex-start;
+
+        gap: 20px;
+    }
+
+    .boton-agregar {
+        width: 100%;
+
+        text-align: center;
     }
 }

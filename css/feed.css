@@ -447,3 +447,169 @@ main {
 
     font-weight: bold;
 }
+
+/* ---------- CATEGORÍAS / TIPOS DE SERVICIO ---------- */
+
+.categorias {
+    margin-bottom: 55px;
+}
+
+
+/* Encabezado de la sección */
+
+.encabezado-categorias {
+    margin-bottom: 24px;
+}
+
+.encabezado-categorias h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 30px;
+    font-weight: normal;
+
+    color: #243b78;
+
+    margin-bottom: 8px;
+}
+
+.encabezado-categorias p {
+    color: #70727a;
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* Contenedor de las categorías */
+
+.contenedor-categorias {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+
+/* Tarjeta individual */
+
+.tarjeta-categoria {
+    padding: 24px 20px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #e2e0db;
+    border-radius: 14px;
+
+    box-shadow:
+        0 4px 15px rgba(40, 40, 40, 0.05);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* Efecto al pasar el mouse */
+
+.tarjeta-categoria:hover {
+    transform: translateY(-4px);
+
+    border-color: #d8c8a5;
+
+    box-shadow:
+        0 9px 20px rgba(40, 40, 40, 0.09);
+}
+
+
+/* Icono */
+
+.icono-categoria {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 17px;
+
+    background-color: #f3eee5;
+
+    border-radius: 50%;
+
+    color: #a2834b;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 23px;
+}
+
+
+/* Nombre de la categoría */
+
+.tarjeta-categoria h3 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 21px;
+    font-weight: normal;
+
+    color: #243b78;
+
+    margin-bottom: 10px;
+}
+
+
+/* Descripción */
+
+.tarjeta-categoria p {
+    color: #70727a;
+
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+
+/* ---------- RESPONSIVE CATEGORÍAS ---------- */
+
+@media (max-width: 900px) {
+
+    .contenedor-categorias {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .contenedor-categorias {
+        grid-template-columns: 1fr;
+    }
+
+    .encabezado-categorias h2 {
+        font-size: 27px;
+    }
+}
+
+/* ---------- PERFIL VERIFICADO ---------- */
+
+.perfil-verificado {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    padding: 5px 9px;
+
+    background-color: #f5f0e5;
+
+    border: 1px solid #d8c8a5;
+
+    border-radius: 20px;
+
+    color: #9a7a43;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
