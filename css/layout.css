@@ -1,0 +1,70 @@
+/* ---------- NAVBAR COMPARTIDO ---------- */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 60px;
+
+    background-color: #ffffff;
+
+    border-bottom: 1px solid #e4dde7;
+}
+
+.logo a {
+    font-size: 26px;
+    font-weight: bold;
+
+    text-decoration: none;
+
+    color: #7a4b7d;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar-links a {
+    text-decoration: none;
+
+    color: #4a414d;
+
+    font-size: 15px;
+}
+
+.navbar-links a:hover {
+    color: #7a4b7d;
+}
+
+
+/* ---------- FOOTER COMPARTIDO ---------- */
+
+#footer {
+    margin-top: 50px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    background-color: #ffffff;
+
+    color: #716a73;
+
+    border-top: 1px solid #e4dde7;
+}
+
+
+/* ---------- RESPONSIVE DEL LAYOUT ---------- */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 20px;
+    }
+
+    .navbar-links {
+        gap: 15px;
+    }
+}

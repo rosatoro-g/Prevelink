@@ -1,0 +1,151 @@
+/* ---------- CONFIGURACIÓN GENERAL ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #f7f4f8;
+
+    color: #2b2530;
+}
+
+
+/* ---------- CONTENIDO ---------- */
+
+main {
+    width: 90%;
+
+    max-width: 750px;
+
+    margin: 0 auto;
+
+    padding: 50px 0;
+}
+
+
+/* ---------- FORMULARIO ---------- */
+
+.contenedor-formulario {
+    background-color: white;
+
+    padding: 40px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.encabezado-formulario {
+    margin-bottom: 35px;
+}
+
+.encabezado-formulario h1 {
+    font-size: 30px;
+
+    margin-bottom: 10px;
+}
+
+.encabezado-formulario p {
+    color: #716a73;
+}
+
+
+/* ---------- CAMPOS ---------- */
+
+.campo {
+    display: flex;
+
+    flex-direction: column;
+
+    margin-bottom: 22px;
+}
+
+.campo label {
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    padding: 13px;
+
+    border: 1px solid #d5ccd8;
+
+    border-radius: 10px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+}
+
+.campo textarea {
+    resize: vertical;
+}
+
+
+/* ---------- BOTONES ---------- */
+
+.acciones {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+.boton-cancelar,
+.boton-publicar {
+    padding: 12px 20px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.boton-cancelar {
+    background-color: #eee9ef;
+
+    color: #4a414d;
+}
+
+.boton-publicar {
+    border: none;
+
+    background-color: #7a4b7d;
+
+    color: white;
+}
+
+
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 700px) {
+
+    .contenedor-formulario {
+        padding: 25px;
+    }
+
+    .acciones {
+        flex-direction: column;
+    }
+
+    .boton-cancelar,
+    .boton-publicar {
+        width: 100%;
+        text-align: center;
+    }
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PrivéLink | Agregar servicio</title>
+
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/servicio.css">
+</head>
+
+<body>
+
+    <!-- Navbar compartido -->
+    <header id="navbar"></header>
+
+
+    <main>
+
+        <section class="contenedor-formulario">
+
+            <div class="encabezado-formulario">
+
+                <h1>Agregar servicio</h1>
+
+                <p>
+                    Completa la información para publicar un nuevo servicio.
+                </p>
+
+            </div>
+
+
+            <form class="formulario-servicio">
+
+                <!-- Nombre -->
+                <div class="campo">
+
+                    <label for="nombre">
+                        Nombre del servicio
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nombre"
+                        placeholder="Ej: Acompañamiento a eventos"
+                    >
+
+                </div>
+
+
+                <!-- Categoría -->
+                <div class="campo">
+
+                    <label for="categoria">
+                        Categoría
+                    </label>
+
+                    <select id="categoria">
+
+                        <option value="">
+                            Selecciona una categoría
+                        </option>
+
+                        <option>
+                            Acompañamiento
+                        </option>
+
+                        <option>
+                            Eventos
+                        </option>
+
+                        <option>
+                            Cena y compañía
+                        </option>
+
+                        <option>
+                            Otro
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Descripción -->
+                <div class="campo">
+
+                    <label for="descripcion">
+                        Descripción
+                    </label>
+
+                    <textarea
+                        id="descripcion"
+                        rows="5"
+                        placeholder="Describe brevemente el servicio..."
+                    ></textarea>
+
+                </div>
+
+
+                <!-- Precio -->
+                <div class="campo">
+
+                    <label for="precio">
+                        Precio
+                    </label>
+
+                    <input
+                        type="number"
+                        id="precio"
+                        placeholder="Ej: 45000"
+                    >
+
+                </div>
+
+
+                <!-- Ubicación -->
+                <div class="campo">
+
+                    <label for="ubicacion">
+                        Ubicación
+                    </label>
+
+                    <input
+                        type="text"
+                        id="ubicacion"
+                        placeholder="Ej: Valdivia"
+                    >
+
+                </div>
+
+
+                <!-- Imagen -->
+                <div class="campo">
+
+                    <label for="imagen">
+                        Imagen del servicio
+                    </label>
+
+                    <input
+                        type="file"
+                        id="imagen"
+                        accept="image/*"
+                    >
+
+                </div>
+
+
+                <!-- Botones -->
+                <div class="acciones">
+
+                    <a href="perfil.html" class="boton-cancelar">
+                        Cancelar
+                    </a>
+
+                    <button type="submit" class="boton-publicar">
+                        Publicar servicio
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer compartido -->
+    <footer id="footer"></footer>
+
+
+    <script src="js/layout.js"></script>
+    <script src="js/servicio.js"></script>
+
+</body>
+
+</html>
