@@ -4,60 +4,64 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registro de Trabajador/a - Privelink</title>
+  <!-- Fuente tipográfica elegante desde Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <form id="registro-trabajadora">
-    <h2>Registro de Trabajador/a</h2>
+  <main class="pantalla-dividida">
+    
+    <!-- Lado Izquierdo: Formulario en tarjeta flotante -->
+    <section class="tarjeta-registro">
+      <h2>Registro</h2>
+      
+      <form id="registro-trabajadora">
+        <div class="campo">
+          <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+        </div>
 
-    <div class="campo">
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre" required>
-    </div>
+        <div class="campo">
+          <input type="text" id="apodo" name="apodo" placeholder="Nombre Artístico / Apodo" required>
+        </div>
 
-    <div class="campo">
-      <label for="apellido">Apellido:</label>
-      <input type="text" id="apellido" name="apellido" required>
-    </div>
+        <div class="campo">
+          <input type="number" id="edad" name="edad" placeholder="Edad" min="18" required>
+        </div>
 
-    <div class="campo">
-      <label for="apodo">Nombre Artístico / Apodo:</label>
-      <input type="text" id="apodo" name="apodo" required>
-    </div>
+        <div class="campo">
+          <input type="tel" id="telefono" name="telefono" placeholder="Teléfono / WhatsApp" required>
+        </div>
 
-    <div class="campo">
-      <label for="edad">Edad:</label>
-      <input type="number" id="edad" name="edad" min="18" required>
-    </div>
+        <div class="campo">
+          <input type="text" id="comuna" name="comuna" placeholder="Comuna / Ubicación" required>
+        </div>
 
-    <div class="campo">
-      <label for="telefono">Teléfono:</label>
-      <input type="tel" id="telefono" name="telefono" required>
-    </div>
+        <div class="campo">
+          <textarea id="descripcion" name="descripcion" rows="2" placeholder="Sobre mí (Descripción)" required></textarea>
+        </div>
 
-    <div class="campo">
-      <label for="comuna">Comuna:</label>
-      <input type="text" id="comuna" name="comuna" required>
-    </div>
+        <div class="campo">
+          <input type="text" id="tarifas" name="tarifas" placeholder="Tarifas / Precios (Ej: $30.000/hr)">
+        </div>
 
-    <div class="campo-completo">
-      <label for="descripcion">Sobre mí (Descripción):</label>
-      <textarea id="descripcion" name="descripcion" rows="3" required></textarea>
-    </div>
+        <div class="campo-foto">
+          <label for="fotos">Subir Fotos</label>
+          <input type="file" id="fotos" name="fotos" accept="image/*" multiple>
+        </div>
 
-    <div class="campo">
-      <label for="tarifas">Tarifas / Precios:</label>
-      <input type="text" id="tarifas" name="tarifas" placeholder="Ej: $30.000 / hora">
-    </div>
+        <button type="submit" class="btn-enviar">Crear Perfil</button>
+      </form>
+    </section>
 
-    <div class="campo">
-      <label for="fotos">Subir Fotos:</label>
-      <input type="file" id="fotos" name="fotos" accept="image/*" multiple>
-    </div>
+    <!-- Lado Derecho: Título Grande -->
+    <section class="lado-derecho">
+      <h1 class="marca-titulo">PRIVELINK</h1>
+    </section>
 
-    <button type="submit">Registrarme</button>
-  </form>
+  </main>
 
 </body>
 </html>

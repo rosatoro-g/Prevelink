@@ -1,111 +1,136 @@
-/* Estilos generales de la página */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #F4EFEB; /* Nuevo fondo */
-  margin: 0;
-  padding: 40px 20px;
-  min-height: 100vh;
+/* Configuración de base y fondo degradado suave */
+* {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%); /* Fondo degradado suave como la foto */
   display: flex;
   justify-content: center;
   align-items: center;
-
+  padding: 30px 20px;
 }
 
-/* Tarjeta contenedora ancha en 2 columnas */
-#registro-trabajadora {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
-  gap: 20px;
+/* Estructura dividida (Izquierda / Derecha) */
+.pantalla-dividida {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
-  max-width: 900px; /* Ancho amplio para monitor */
-  background-color: #9f829c; /* Fondo más oscuro para el formulario */
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-  box-sizing: border-box;
+  max-width: 1100px;
+  gap: 40px;
 }
 
-/* Título centrado arriba que ocupa las 2 columnas */
-#registro-trabajadora h2 {
-  grid-column: 1 / -1;
-  color: #e6ccb2; /* Tono arena / crema */
-  text-align: center;
+/* Lado Izquierdo: Tarjeta Blanca flotante */
+.tarjeta-registro {
+  background: #ffffff;
+  padding: 40px 35px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta-registro h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #1a1a1a;
   font-size: 28px;
-  margin-top: 0;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* Campos de entrada con líneas minimalistas */
+.campo {
+  margin-bottom: 18px;
+}
+
+.campo input,
+.campo textarea {
+  width: 100%;
+  padding: 10px 5px;
+  border: none;
+  border-bottom: 1px solid #cccccc;
+  background: transparent;
+  font-size: 14px;
+  color: #333333;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+  border-bottom-color: #6c5ce7;
+}
+
+/* Selector de fotos */
+.campo-foto {
+  margin-top: 15px;
   margin-bottom: 20px;
 }
 
-/* Contenedores de cada campo */
-.campo {
-  display: flex;
-  flex-direction: column;
+.campo-foto label {
+  display: block;
+  font-size: 13px;
+  color: #666666;
+  margin-bottom: 5px;
 }
 
-/* Campo que ocupa el ancho completo (para la descripción) */
-.campo-completo {
-  grid-column: 1 / -1;
-  display: flex;
-  flex-direction: column;
+.campo-foto input {
+  font-size: 12px;
+  color: #666666;
 }
 
-/* Etiquetas */
-#registro-trabajadora label {
-  color: #e2cbb6;
-  font-weight: bold;
-  font-size: 14px;
-  margin-bottom: 6px;
-}
-
-/* Entradas de texto y números */
-#registro-trabajadora input[type="text"],
-#registro-trabajadora input[type="number"],
-#registro-trabajadora input[type="tel"],
-#registro-trabajadora textarea {
+/* Botón degradado Morado/Azul */
+.btn-enviar {
   width: 100%;
   padding: 12px;
-  border: 1px solid #7f5539;
-  border-radius: 8px;
-  background-color: #d6cac1;
-  color: #ffffff;
-  font-size: 14px;
-  box-sizing: border-box;
-}
-
-#registro-trabajadora input:focus,
-#registro-trabajadora textarea:focus {
-  outline: none;
-  border-color: #ddb892;
-}
-
-/* Campo para subir archivos */
-#registro-trabajadora input[type="file"] {
-  color: #ede0d4;
-  padding: 5px 0;
-}
-
-/* Botón que ocupa todo el ancho abajo */
-#registro-trabajadora button {
-  grid-column: 1 / -1;
-  margin-top: 15px;
-  padding: 14px;
-  background-color: #a56a56; /* Terracota */
-  color: #ffffff;
   border: none;
-  border-radius: 8px;
-  font-size: 18px;
-  font-weight: bold;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #8a2387, #e94057, #f27121);
+  background: linear-gradient(90deg, #6c5ce7, #4834d4);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-#registro-trabajadora button:hover {
-  background-color: #8f3e23;
+.btn-enviar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(72, 52, 212, 0.4);
 }
 
-/* Adaptable si achican la pantalla o para celular */
-@media (max-width: 768px) {
-  #registro-trabajadora {
-    grid-template-columns: 1fr;
+/* Lado Derecho: Nombre con tipografía elegante */
+.lado-derecho {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.marca-titulo {
+  font-family: 'Playfair Display', serif; /* Tipografía tipo revista / elegancia */
+  font-size: 72px;
+  font-weight: 800;
+  color: #2d132c;
+  letter-spacing: 6px;
+  text-align: center;
+}
+
+/* Adaptable a móviles (se apila verticalmente) */
+@media (max-width: 850px) {
+  .pantalla-dividida {
+    flex-direction: column-reverse;
+  }
+
+  .marca-titulo {
+    font-size: 48px;
+    margin-bottom: 20px;
   }
 }
