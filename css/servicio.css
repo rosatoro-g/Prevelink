@@ -1,0 +1,283 @@
+/* ---------- CONFIGURACIÓN GENERAL ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    background-color: #f7f6f2;
+    color: #25262b;
+}
+
+
+/* ---------- CONTENIDO PRINCIPAL ---------- */
+
+main {
+    width: 90%;
+    max-width: 780px;
+
+    margin: 0 auto;
+    padding: 55px 0 80px;
+}
+
+
+/* ---------- CONTENEDOR DEL FORMULARIO ---------- */
+
+.contenedor-formulario {
+    position: relative;
+
+    background-color: #ffffff;
+
+    padding: 42px;
+
+    border: 1px solid #e2e0db;
+    border-radius: 16px;
+
+    box-shadow:
+        0 5px 20px rgba(40, 40, 40, 0.07);
+}
+
+
+/* Línea dorada decorativa */
+
+.contenedor-formulario::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 42px;
+
+    width: 70px;
+    height: 4px;
+
+    background-color: #b59a63;
+
+    border-radius: 0 0 5px 5px;
+}
+
+
+/* ---------- ENCABEZADO ---------- */
+
+.encabezado-formulario {
+    margin-bottom: 35px;
+}
+
+.encabezado-formulario h1 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 38px;
+    font-weight: normal;
+
+    color: #243b78;
+
+    margin-bottom: 10px;
+}
+
+.encabezado-formulario p {
+    max-width: 550px;
+
+    color: #70727a;
+
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* ---------- CAMPOS DEL FORMULARIO ---------- */
+
+.campo {
+    display: flex;
+
+    flex-direction: column;
+
+    margin-bottom: 22px;
+}
+
+.campo label {
+    margin-bottom: 8px;
+
+    color: #45464b;
+
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/* Inputs, select y textarea */
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    background-color: #fbfbfa;
+
+    color: #25262b;
+
+    border: 1px solid #dedfe4;
+    border-radius: 9px;
+
+    font-family: "Trebuchet MS", Arial, sans-serif;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+
+/* Placeholder */
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+    color: #97989d;
+}
+
+
+/* Cuando seleccionas un campo */
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    background-color: #ffffff;
+
+    border-color: #b59a63;
+
+    box-shadow:
+        0 0 0 3px rgba(181, 154, 99, 0.12);
+}
+
+
+.campo textarea {
+    resize: vertical;
+
+    min-height: 120px;
+}
+
+
+/* ---------- ARCHIVO / IMAGEN ---------- */
+
+.campo input[type="file"] {
+    background-color: #f9f8f5;
+
+    cursor: pointer;
+}
+
+
+/* ---------- BOTONES ---------- */
+
+.acciones {
+    display: flex;
+
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 14px;
+
+    margin-top: 32px;
+}
+
+
+/* Botón cancelar */
+
+.boton-cancelar {
+    padding: 12px 20px;
+
+    background-color: #f0efeb;
+
+    color: #55565b;
+
+    border: 1px solid #dfded9;
+    border-radius: 9px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    text-decoration: none;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.boton-cancelar:hover {
+    background-color: #e8e6df;
+
+    border-color: #d8c8a5;
+}
+
+
+/* Botón publicar */
+
+.boton-publicar {
+    padding: 12px 22px;
+
+    border: none;
+    border-radius: 9px;
+
+    background-color: #304fa8;
+
+    color: #ffffff;
+
+    font-family: "Trebuchet MS", Arial, sans-serif;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.boton-publicar:hover {
+    background-color: #243b78;
+
+    transform: translateY(-1px);
+}
+
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 650px) {
+
+    main {
+        width: 92%;
+
+        padding-top: 35px;
+    }
+
+    .contenedor-formulario {
+        padding: 32px 24px;
+    }
+
+    .contenedor-formulario::before {
+        left: 24px;
+    }
+
+    .encabezado-formulario h1 {
+        font-size: 34px;
+    }
+
+    .acciones {
+        flex-direction: column-reverse;
+    }
+
+    .boton-cancelar,
+    .boton-publicar {
+        width: 100%;
+
+        text-align: center;
+    }
+}
