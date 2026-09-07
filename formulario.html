@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registro de Trabajador/a - Privélink</title>
-
+  <title>Registro de Trabajador/a - Privelink</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -18,50 +17,99 @@
     <section class="tarjeta-registro">
       <h2>Registro</h2>
       
-      <form id="registro-trabajadora">
-        <div class="campo">
-          <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+      ---Barra de Progreso e Indicador 
+      <div class="contenedor-progreso">
+        <div class="barra-progreso-bg">
+          <div class="barra-progreso-fill" id="barra-progreso"></div>
+        </div>
+        <div class="indicador-pasos">
+          <span class="paso-dot activo">1</span>
+          <span class="paso-dot">2</span>
+          <span class="paso-dot">3</span>
+        </div>
+      </div>
+
+      <form id="registro-trabajadora" novalidate>
+        
+        -- PASO 1: Datos Personales --
+        <div class="paso-form activo" id="paso-1">
+          <h3>Paso 1: Datos Personales</h3>
+
+          <div class="campo">
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+            <span class="msj-error">Ingresa tu nombre completo.</span>
+          </div>
+
+          <div class="campo">
+            <input type="text" id="apodo" name="apodo" placeholder="Nombre Artístico / Apodo" required>
+            <span class="msj-error">Ingresa tu apodo o nombre artístico.</span>
+          </div>
+
+          <div class="campo">
+            <input type="number" id="edad" name="edad" placeholder="Edad" min="18" required>
+            <span class="msj-error">Debes ser mayor de 18 años.</span>
+          </div>
+
+          <div class="campo">
+            <input type="tel" id="telefono" name="telefono" placeholder="Teléfono / WhatsApp (ej: +56912345678)" pattern="^[0-9+ ]{8,15}$" required>
+            <span class="msj-error">Ingresa un número telefónico válido.</span>
+          </div>
+
+          <button type="button" class="btn-siguiente" onclick="siguientePaso(1)">Siguiente</button>
         </div>
 
-        <div class="campo">
-          <input type="text" id="apodo" name="apodo" placeholder="Nombre Artístico / Apodo" required>
+        -- PASO 2: Ubicación y Detalles --
+        <div class="paso-form" id="paso-2">
+          <h3>Paso 2: Ubicación y Tarifas</h3>
+
+          <div class="campo">
+            <input type="text" id="comuna" name="comuna" placeholder="Comuna / Ubicación" required>
+            <span class="msj-error">Ingresa tu comuna o ciudad.</span>
+          </div>
+
+          <div class="campo">
+            <input type="text" id="tarifas" name="tarifas" placeholder="Tarifas / Precios (ej: $30.000/hr)" required>
+            <span class="msj-error">Especifica tus tarifas.</span>
+          </div>
+
+          <div class="campo">
+            <textarea id="descripcion" name="descripcion" rows="3" placeholder="Sobre mí (Descripción)" required></textarea>
+            <span class="msj-error">Escribe una breve descripción.</span>
+          </div>
+
+          <div class="acciones-paso">
+            <button type="button" class="btn-atras" onclick="anteriorPaso(2)">Atrás</button>
+            <button type="button" class="btn-siguiente" onclick="siguientePaso(2)">Siguiente</button>
+          </div>
         </div>
 
-        <div class="campo">
-          <input type="number" id="edad" name="edad" placeholder="Edad" min="18" required>
+        -- PASO 3: Fotos y Confirmación --
+        <div class="paso-form" id="paso-3">
+          <h3>Paso 3: Fotos y Confirmación</h3>
+
+          <div class="campo-foto">
+            <label for="fotos">Subir Fotos de Perfil:</label>
+            <input type="file" id="fotos" name="fotos" accept="image/*" multiple required>
+            <span class="msj-error">Adjunta al menos una foto de perfil.</span>
+          </div>
+
+          <div class="acciones-paso">
+            <button type="button" class="btn-atras" onclick="anteriorPaso(3)">Atrás</button>
+            <button type="submit" class="btn-enviar">Crear Perfil</button>
+          </div>
         </div>
 
-        <div class="campo">
-          <input type="tel" id="telefono" name="telefono" placeholder="Teléfono / WhatsApp" required>
-        </div>
-
-        <div class="campo">
-          <input type="text" id="comuna" name="comuna" placeholder="Comuna / Ubicación" required>
-        </div>
-
-        <div class="campo">
-          <textarea id="descripcion" name="descripcion" rows="2" placeholder="Sobre mí (Descripción)" required></textarea>
-        </div>
-
-        <div class="campo">
-          <input type="text" id="tarifas" name="tarifas" placeholder="Tarifas / Precios (Ej: $30.000/hr)">
-        </div>
-
-        <div class="campo-foto">
-          <label for="fotos">Subir Fotos</label>
-          <input type="file" id="fotos" name="fotos" accept="image/*" multiple>
-        </div>
-
-        <button type="submit" class="btn-enviar">Crear Perfil</button>
       </form>
     </section>
 
-    
+    -- Lado Derecho: Título de la marca --
     <section class="lado-derecho">
       <h1 class="marca-titulo">PRIVÉLINK</h1>
     </section>
 
   </main>
 
+  -- Script JavaScript al final --
+  <script src="script.js"></script>
 </body>
 </html>
