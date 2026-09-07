@@ -15,16 +15,55 @@
     <div class="container-fluid vh-100 p-0">
         <div class="row g-0 h-100">
 
-            <!-- LADO IZQUIERDO CON COLOR DE FONDO -->
-            <header class="col-md-6 bg-cobalto p-4">
+            <!-- LADO IZQUIERDO AZUL -->
+            <header class="col-md-6 bg-cobalto p-4 d-flex flex-column justify-content-between">
+                <!-- Botón Volver arriba -->
                 <nav>
                     <ul class="list-unstyled m-0">
                         <li><a href="index.html" class="text-white text-decoration-none fw-bold">Volver</a></li>
                     </ul>
                 </nav>
+
+                <!-- CARRUSEL CENTRADO AL MEDIO -->
+                <div id="carruselCreadoras" class="carousel slide my-auto" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+
+                        <!-- DIAPOSITIVA 1 -->
+                        <div class="carousel-item active">
+                            <div class="card-creadora bg-white text-dark p-4 rounded-4 shadow mx-auto">
+                                <img src="https://via.placeholder.com/150" class="rounded-3 mb-3 w-100 object-fit-cover" alt="Creadora 1" style="height: 180px;">
+                                <p class="fst-italic text-secondary fs-6 mb-2">"PreveLink ha cambiado completamente la forma en que gestiono mis eventos."</p>
+                                <h6 class="fw-bold m-0 text-primary">@creadora_1</h6>
+                            </div>
+                        </div>
+
+                        <!-- DIAPOSITIVA 2 -->
+                        <div class="carousel-item">
+                            <div class="card-creadora bg-white text-dark p-4 rounded-4 shadow mx-auto">
+                                <img src="https://via.placeholder.com/150" class="rounded-3 mb-3 w-100 object-fit-cover" alt="Creadora 2" style="height: 180px;">
+                                <p class="fst-italic text-secondary fs-6 mb-2">"La mejor plataforma para conectar de forma segura y directa."</p>
+                                <h6 class="fw-bold m-0 text-primary">@creadora_2</h6>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- CONTROLES ANTERIOR Y SIGUIENTE -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carruselCreadoras" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carruselCreadoras" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+                </div>
+
+                <!-- Div vacío para mantener el equilibrio del flexbox -->
+                <div></div>
             </header>
 
-            <!-- LADO DERECHO CON FORMULARIO CENTRADO -->
+            <!-- LADO DERECHO FORMULARIO -->
             <div class="col-md-6 d-flex justify-content-center align-items-center p-3">
                 <nav id="inicio-sesion">
                     <div>
