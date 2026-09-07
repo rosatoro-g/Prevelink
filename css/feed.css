@@ -279,6 +279,18 @@ main {
     display: block;
 }
 
+.foto-sofia {
+    object-position: center 30%;
+}
+
+.foto-amanda {
+    object-position: center 25%;
+}
+
+.foto-emilia {
+    object-position: center 20%;
+}
+
 
 /* ---------- INFORMACIÓN DEL PERFIL ---------- */
 
@@ -607,4 +619,78 @@ main {
     font-size: 11px;
 
     font-weight: bold;
+}
+
+/* ---------- MENSAJE SIN RESULTADOS ---------- */
+
+.mensaje-sin-resultados {
+    display: none;
+
+    padding: 35px;
+
+    margin-top: 20px;
+
+    text-align: center;
+
+    background-color: #ffffff;
+
+    border: 1px solid #e2e0db;
+    border-radius: 14px;
+
+    box-shadow:
+        0 4px 15px rgba(40, 40, 40, 0.05);
+}
+
+.mensaje-sin-resultados h3 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 24px;
+    font-weight: normal;
+
+    color: #243b78;
+
+    margin-bottom: 8px;
+}
+
+.mensaje-sin-resultados p {
+    color: #70727a;
+
+    font-size: 14px;
+}
+
+/* ---------- MENSAJE SIN RESULTADOS ---------- */
+
+.mensaje-sin-resultados {
+    display: none;
+    padding: 35px;
+    margin-top: 20px;
+
+    text-align: center;
+
+    background-color: #ffffff;
+
+    border: 1px solid #e2e0db;
+    border-radius: 14px;
+
+    box-shadow: 0 4px 15px rgba(40, 40, 40, 0.05);
+}
+
+
+.mensaje-sin-resultados h3 {
+    margin-bottom: 8px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+    font-weight: normal;
+
+    color: #243b78;
+}
+
+
+.mensaje-sin-resultados p {
+    margin: 0;
+
+    font-size: 14px;
+
+    color: #70727a;
 }
