@@ -1,0 +1,610 @@
+/* ---------- CONFIGURACIÓN GENERAL ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    background-color: #f7f6f2;
+    color: #25262b;
+}
+
+
+/* ---------- CONTENIDO PRINCIPAL ---------- */
+
+main {
+    width: 90%;
+    max-width: 1150px;
+
+    margin: 0 auto;
+    padding: 55px 0 80px;
+}
+
+
+/* ---------- BIENVENIDA ---------- */
+
+.bienvenida {
+    margin-bottom: 32px;
+}
+
+.bienvenida h1 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 46px;
+    font-weight: normal;
+
+    color: #243b78;
+
+    margin-bottom: 10px;
+
+    line-height: 1.1;
+}
+
+.bienvenida h1::after {
+    content: "";
+
+    display: block;
+
+    width: 60px;
+    height: 3px;
+
+    margin-top: 14px;
+
+    background-color: #b59a63;
+
+    border-radius: 10px;
+}
+
+.bienvenida p {
+    max-width: 700px;
+
+    margin-top: 15px;
+
+    font-size: 16px;
+    line-height: 1.6;
+
+    color: #70727a;
+}
+
+
+/* ---------- BUSCADOR ---------- */
+
+.busqueda {
+    display: flex;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+}
+
+.busqueda input {
+    flex: 1;
+
+    padding: 15px 18px;
+
+    background-color: #ffffff;
+    color: #25262b;
+
+    border: 1px solid #dedfe4;
+    border-radius: 10px;
+
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.busqueda input::placeholder {
+    color: #98999e;
+}
+
+.busqueda input:focus {
+    border-color: #b59a63;
+
+    box-shadow:
+        0 0 0 3px rgba(181, 154, 99, 0.12);
+}
+
+.busqueda button {
+    padding: 0 28px;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: #304fa8;
+    color: #ffffff;
+
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.busqueda button:hover {
+    background-color: #243b78;
+
+    transform: translateY(-1px);
+}
+
+
+/* ---------- FILTROS ---------- */
+
+.filtros {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+
+    padding: 22px;
+
+    margin-bottom: 48px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #e2e0db;
+    border-radius: 14px;
+
+    box-shadow:
+        0 4px 16px rgba(40, 40, 40, 0.05);
+}
+
+.grupo-filtro {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.grupo-filtro label {
+    font-size: 12px;
+    font-weight: bold;
+
+    color: #5f6066;
+}
+
+.grupo-filtro select {
+    width: 100%;
+
+    padding: 12px;
+
+    background-color: #f9f9f8;
+    color: #25262b;
+
+    border: 1px solid #dedfe4;
+    border-radius: 8px;
+
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 13px;
+
+    outline: none;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.grupo-filtro select:focus {
+    border-color: #b59a63;
+
+    box-shadow:
+        0 0 0 3px rgba(181, 154, 99, 0.10);
+}
+
+
+/* ---------- SECCIÓN DEL FEED ---------- */
+
+.feed h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 34px;
+    font-weight: normal;
+
+    margin-bottom: 24px;
+
+    color: #243b78;
+}
+
+
+/* ---------- CONTENEDOR DE PERFILES ---------- */
+
+.contenedor-perfiles {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 24px;
+}
+
+
+/* ---------- TARJETAS DE PERFIL ---------- */
+
+.tarjeta-perfil {
+    overflow: hidden;
+
+    background-color: #ffffff;
+
+    border: 1px solid #e2e0db;
+    border-radius: 14px;
+
+    box-shadow:
+        0 5px 18px rgba(40, 40, 40, 0.07);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.tarjeta-perfil:hover {
+    transform: translateY(-5px);
+
+    border-color: #d8c8a5;
+
+    box-shadow:
+        0 10px 25px rgba(40, 40, 40, 0.11);
+}
+
+/* ---------- FOTO DEL PERFIL ---------- */
+
+.foto-perfil {
+    height: 240px;
+
+    overflow: hidden;
+
+    background-color: #eef1fa;
+}
+
+.foto-perfil img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* ---------- INFORMACIÓN DEL PERFIL ---------- */
+
+.informacion-perfil {
+    padding: 22px;
+}
+
+.informacion-perfil h3 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 28px;
+    font-weight: normal;
+
+    margin-bottom: 9px;
+
+    color: #25262b;
+}
+
+.informacion-perfil p {
+    margin-bottom: 7px;
+
+    font-size: 14px;
+
+    color: #5f6066;
+}
+
+.informacion-perfil .descripcion {
+    margin-top: 13px;
+
+    color: #7b7c82;
+
+    line-height: 1.5;
+}
+
+
+/* ---------- BOTÓN VER PERFIL ---------- */
+
+.informacion-perfil a {
+    display: inline-block;
+
+    margin-top: 16px;
+
+    padding: 10px 18px;
+
+    background-color: #304fa8;
+    color: #ffffff;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    text-decoration: none;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.informacion-perfil a:hover {
+    background-color: #243b78;
+
+    transform: translateY(-1px);
+}
+
+
+/* ---------- RESPONSIVE TABLET ---------- */
+
+@media (max-width: 900px) {
+
+    .filtros {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contenedor-perfiles {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* ---------- RESPONSIVE CELULAR ---------- */
+
+@media (max-width: 650px) {
+
+    main {
+        width: 92%;
+
+        padding-top: 35px;
+    }
+
+    .bienvenida h1 {
+        font-size: 36px;
+    }
+
+    .busqueda {
+        flex-direction: column;
+    }
+
+    .busqueda button {
+        padding: 14px;
+    }
+
+    .filtros {
+        grid-template-columns: 1fr;
+    }
+
+    .contenedor-perfiles {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---------- DETALLES DE LAS TARJETAS ---------- */
+
+/* Estado de disponibilidad */
+.estado-perfil {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    padding: 6px 10px;
+
+    background-color: #eef1fa;
+
+    border: 1px solid #d9dfef;
+    border-radius: 20px;
+
+    color: #304fa8;
+
+    font-size: 11px;
+    font-weight: bold;
+}
+
+
+/* Ubicación */
+.ubicacion-perfil {
+    color: #70727a !important;
+}
+
+
+/* Tipos de servicio */
+.tipo-servicio {
+    margin-top: 12px;
+
+    color: #70727a !important;
+
+    font-size: 13px !important;
+
+    line-height: 1.5;
+}
+
+
+/* Precio inicial */
+.precio-desde {
+    margin-top: 12px;
+
+    color: #a2834b !important;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 17px !important;
+
+    font-weight: bold;
+}
+
+/* ---------- CATEGORÍAS / TIPOS DE SERVICIO ---------- */
+
+.categorias {
+    margin-bottom: 55px;
+}
+
+
+/* Encabezado de la sección */
+
+.encabezado-categorias {
+    margin-bottom: 24px;
+}
+
+.encabezado-categorias h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 30px;
+    font-weight: normal;
+
+    color: #243b78;
+
+    margin-bottom: 8px;
+}
+
+.encabezado-categorias p {
+    color: #70727a;
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* Contenedor de las categorías */
+
+.contenedor-categorias {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+
+/* Tarjeta individual */
+
+.tarjeta-categoria {
+    padding: 24px 20px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #e2e0db;
+    border-radius: 14px;
+
+    box-shadow:
+        0 4px 15px rgba(40, 40, 40, 0.05);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* Efecto al pasar el mouse */
+
+.tarjeta-categoria:hover {
+    transform: translateY(-4px);
+
+    border-color: #d8c8a5;
+
+    box-shadow:
+        0 9px 20px rgba(40, 40, 40, 0.09);
+}
+
+
+/* Icono */
+
+.icono-categoria {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 17px;
+
+    background-color: #f3eee5;
+
+    border-radius: 50%;
+
+    color: #a2834b;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 23px;
+}
+
+
+/* Nombre de la categoría */
+
+.tarjeta-categoria h3 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 21px;
+    font-weight: normal;
+
+    color: #243b78;
+
+    margin-bottom: 10px;
+}
+
+
+/* Descripción */
+
+.tarjeta-categoria p {
+    color: #70727a;
+
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+
+/* ---------- RESPONSIVE CATEGORÍAS ---------- */
+
+@media (max-width: 900px) {
+
+    .contenedor-categorias {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .contenedor-categorias {
+        grid-template-columns: 1fr;
+    }
+
+    .encabezado-categorias h2 {
+        font-size: 27px;
+    }
+}
+
+/* ---------- PERFIL VERIFICADO ---------- */
+
+.perfil-verificado {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    padding: 5px 9px;
+
+    background-color: #f5f0e5;
+
+    border: 1px solid #d8c8a5;
+
+    border-radius: 20px;
+
+    color: #9a7a43;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}

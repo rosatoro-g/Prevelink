@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #F4EFEB;
+  min-height: 100vh;
+  position: relative;
+  font-family: sans-serif;
+}
+
+/* 1. LOGO ESQUINA IZQUIERDA (200px) */
+.header-top {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  z-index: 100;
+  box-sizing: border-box;
+}
+
+.logo-small {
+  width: 300px;
+  height: auto;
+  display: block;
+}
+
+/* 2. CONTENEDOR CENTRAL QUE ALINEA TODO AL CENTRO */
+.hero-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* 3. LOGO GRANDE (700px) Y ANIMACIÓN */
+#nombre-grande {
+  display: flex;
+  justify-content: center;
+  animation: flotar 3s ease-in-out infinite;
+}
+
+.logo-grande {
+  width: 700px;
+  max-width: 90vw;
+  height: auto;
+  display: block;
+}
+
+@keyframes flotar {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
+
+/* 4. SECCIÓN Y BOTONES PEQUEÑOS DEBAJO DEL LOGO */
+
+.botones {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 280px; /* Ancho ajustado para que los botones se vean delgados y elegantes */
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* ESTILO AZUL COBALTO */
+.btn-custom {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-custom.primary {
+  background-color: #002FA7;
+  color: #FFFFFF;
+  border: 1px solid #002FA7;
+  box-shadow: 0 4px 10px rgba(0, 47, 167, 0.2);
+}
+
+.btn-custom.primary:hover {
+  background-color: #002175;
+}
+
+.btn-custom.secondary {
+  background-color: transparent;
+  color: #002FA7;
+  border: 1px solid #002FA7;
+}
+
+.btn-custom.secondary:hover {
+  background-color: rgba(0, 47, 167, 0.08);
+}
+
+
+/* Botones long in */
+
+.inicio {
+ position: static
+}
+
+/* Estilo de boton de inicio admin*/
+/* BOTÓN LONG IN CON ESTILO AZUL COBALTO */
+/* Ajustes para el botón de desplegable personalizado */
+.inicio .dropdown-toggle::after {
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+.inicio .btn-custom.primary:focus,
+.inicio .show > .btn-custom.primary {
+  background-color: #002175;
+  border-color: #002175;
+  color: #FFFFFF;
+}
+
+/* Color al pasar el ratón sobre las opciones del menú */
+.dropdown-menu .dropdown-item:hover {
+  background-color: rgba(0, 47, 167, 0.08);
+  color: #002FA7;
+}
+
+/* CONTENEDOR DEL MENSAJE */
+#mensaje {
+ position: absolute;
+  top: 220px; /* Misma distancia vertical desde arriba que el logo */
+  left: 40px; /* Misma distancia horizontal desde la izquierda que el logo */
+  max-width: 500px; /* Ancho para mantener la forma del texto */
+  margin: 0;
+  padding: 0;
+  z-index: 10;
+}
+
+/* TÍTULO ESTILO LANDING */
+#mensaje .pregunta {
+  color: #002FA7;
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.05;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+/* PARÁGRAFO DESCRIPTIVO */
+#mensaje .descripcion {
+  color: #002FA7;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* TEXTO DESTACADO DE LLAMADA */
+#mensaje .llamado {
+  color: #002FA7;
+  font-size: 1.2rem;
+  font-weight: 700;
+}

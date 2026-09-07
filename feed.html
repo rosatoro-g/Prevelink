@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PrivéLink | Feed</title>
+
+    <!-- CSS exclusivo de esta página -->
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/feed.css">
+</head>
+
+<body>
+
+    <!--
+        Aquí más adelante aparecerá el navbar.
+        Lo crearemos desde layout.js.
+    -->
+    <header id="navbar"></header>
+
+
+    <main>
+
+        <!-- PRESENTACIÓN DEL FEED -->
+        <section class="bienvenida">
+
+            <h1>Encuentra la compañía ideal para cada ocasión</h1>
+
+            <p>
+                Explora perfiles, conoce sus servicios y encuentra opciones
+                según tu ubicación, presupuesto y preferencias.
+            </p>
+
+        </section>
+
+
+        <!-- BUSCADOR -->
+        <section class="busqueda">
+
+            <input
+                type="search"
+                placeholder="Buscar por nombre, servicio o ubicación..."
+            >
+
+            <button type="button">
+                Buscar
+            </button>
+
+        </section>
+
+    <!-- FILTROS DEL FEED -->
+    <section class="filtros">
+
+        <!-- Tipo de servicio -->
+        <div class="grupo-filtro">
+
+            <label for="filtro-servicio">
+                Tipo de servicio
+            </label>
+
+            <select id="filtro-servicio">
+
+                <option value="">
+                    Todos los servicios
+                </option>
+
+                <option value="acompanamiento">
+                    Acompañamiento
+                </option>
+
+                <option value="eventos">
+                    Eventos
+                </option>
+
+                <option value="cena">
+                    Cena y compañía
+                </option>
+
+                <option value="experiencias">
+                    Experiencias
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- Precio -->
+        <div class="grupo-filtro">
+
+            <label for="filtro-precio">
+                Rango de precio
+            </label>
+
+            <select id="filtro-precio">
+
+                <option value="">
+                    Cualquier precio
+                </option>
+
+                <option value="30000">
+                    Hasta $30.000
+                </option>
+
+                <option value="50000">
+                    $30.000 - $50.000
+                </option>
+
+                <option value="50001">
+                    Más de $50.000
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- Ubicación -->
+        <div class="grupo-filtro">
+
+            <label for="filtro-ubicacion">
+                Ubicación
+            </label>
+
+            <select id="filtro-ubicacion">
+
+                <option value="">
+                    Todas las ubicaciones
+                </option>
+
+                <option value="valdivia">
+                    Valdivia
+                </option>
+
+                <option value="temuco">
+                    Temuco
+                </option>
+
+                <option value="santiago">
+                    Santiago
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- Disponibilidad -->
+        <div class="grupo-filtro">
+
+            <label for="filtro-disponibilidad">
+                Disponibilidad
+            </label>
+
+            <select id="filtro-disponibilidad">
+
+                <option value="">
+                    Cualquier fecha
+                </option>
+
+                <option value="hoy">
+                    Disponible hoy
+                </option>
+
+                <option value="semana">
+                    Esta semana
+                </option>
+
+            </select>
+
+        </div>
+
+    </section>
+        <!-- TIPOS DE SERVICIO -->
+    <section class="categorias">
+
+        <div class="encabezado-categorias">
+
+            <h2>Explora por tipo de servicio</h2>
+
+            <p>
+                Encuentra perfiles según el tipo de experiencia que buscas.
+            </p>
+
+        </div>
+
+
+        <div class="contenedor-categorias">
+
+            <!-- CATEGORÍA 1 -->
+            <article class="tarjeta-categoria">
+
+                <div class="icono-categoria">
+                    ♡
+                </div>
+
+                <h3>Acompañamiento</h3>
+
+                <p>
+                    Encuentra compañía para distintas ocasiones y actividades.
+                </p>
+
+            </article>
+
+
+            <!-- CATEGORÍA 2 -->
+            <article class="tarjeta-categoria">
+
+                <div class="icono-categoria">
+                    ✦
+                </div>
+
+                <h3>Eventos</h3>
+
+                <p>
+                    Perfiles disponibles para celebraciones, reuniones y eventos.
+                </p>
+
+            </article>
+
+
+            <!-- CATEGORÍA 3 -->
+            <article class="tarjeta-categoria">
+
+                <div class="icono-categoria">
+                    ◇
+                </div>
+
+                <h3>Cena y compañía</h3>
+
+                <p>
+                    Opciones de acompañamiento para cenas y encuentros especiales.
+                </p>
+
+            </article>
+
+
+            <!-- CATEGORÍA 4 -->
+            <article class="tarjeta-categoria">
+
+                <div class="icono-categoria">
+                    ☆
+                </div>
+
+                <h3>Experiencias</h3>
+
+                <p>
+                    Descubre actividades y experiencias ofrecidas por cada perfil.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+        <!-- SECCIÓN PRINCIPAL DEL FEED -->
+        <section class="feed">
+
+            <h2>Perfiles destacados</h2>
+
+
+            <div class="contenedor-perfiles">
+
+                <!-- PERFIL 1 -->
+                <article class="tarjeta-perfil">
+
+                    <div class="foto-perfil">
+                        <img src="img/sofia.jpg" alt="Perfil de Sofía">
+                    </div>
+
+                    <div class="informacion-perfil">
+
+                        <div class="estado-perfil">
+                            Disponible hoy
+                        </div>
+                        <div class="perfil-verificado">
+                            ✓ Perfil verificado
+                        </div>
+
+                        <h3>Sofía, 25</h3>
+
+                        <p class="ubicacion-perfil">
+                            📍 Valdivia
+                        </p>
+
+                        <p class="descripcion">
+                            Música, viajes y buenas conversaciones.
+                        </p>
+
+                        <p class="tipo-servicio">
+                            Acompañamiento · Eventos · Cena
+                        </p>
+
+                        <p class="precio-desde">
+                            Desde $40.000
+                        </p>
+
+                        <a href="perfil.html">
+                            Ver perfil
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PERFIL 2 -->
+                <article class="tarjeta-perfil">
+
+                    <div class="foto-perfil">
+                        <img src="img/amanda.jpg" alt="Perfil de Amanda">
+                    </div>
+
+                    <div class="informacion-perfil">
+
+                        <div class="estado-perfil">
+                            Disponible esta semana
+                        </div>
+
+                        <h3>Amanda, 27</h3>
+
+                        <p class="ubicacion-perfil">
+                            📍 Valdivia
+                        </p>
+
+                        <p class="descripcion">
+                            Fotografía, eventos y nuevos lugares.
+                        </p>
+
+                        <p class="tipo-servicio">
+                            Eventos · Compañía · Experiencias
+                        </p>
+
+                        <p class="precio-desde">
+                            Desde $35.000
+                        </p>
+
+                        <a href="#">
+                            Ver perfil
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PERFIL 3 -->
+                <article class="tarjeta-perfil">
+
+                    <div class="foto-perfil">
+                        <img src="img/emilia.jpg" alt="Perfil de Emilia">
+                    </div>
+
+                    <div class="informacion-perfil">
+
+                        <div class="estado-perfil">
+                            Disponible hoy
+                        </div>
+
+                        <h3>Emilia, 24</h3>
+
+                        <p class="ubicacion-perfil">
+                            📍 Temuco
+                        </p>
+
+                        <p class="descripcion">
+                            Cine, gastronomía y viajes.
+                        </p>
+
+                        <p class="tipo-servicio">
+                            Cena · Acompañamiento · Eventos
+                        </p>
+
+                        <p class="precio-desde">
+                            Desde $45.000
+                        </p>
+
+                        <a href="#">
+                            Ver perfil
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!--
+        Aquí más adelante aparecerá el footer.
+        También vendrá desde layout.js.
+    -->
+    <footer id="footer"></footer>
+
+
+    <!-- Más adelante usaremos este archivo para navbar y footer -->
+    <script src="js/layout.js"></script>
+
+</body>
+
+</html>
