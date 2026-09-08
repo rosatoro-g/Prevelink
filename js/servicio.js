@@ -1,37 +1,100 @@
 const formulario = document.querySelector(".formulario-servicio");
 
+
 formulario.addEventListener("submit", function (evento) {
 
-    // Evita que el formulario recargue la página
     evento.preventDefault();
 
 
-    // Obtener los datos escritos en el formulario
-    const nombre = document.getElementById("nombre").value;
-    const categoria = document.getElementById("categoria").value;
-    const descripcion = document.getElementById("descripcion").value;
-    const precio = document.getElementById("precio").value;
-    const ubicacion = document.getElementById("ubicacion").value;
+    // ---------- OBTENER DATOS DEL FORMULARIO ----------
+
+    const nombre =
+        document.getElementById("nombre").value;
+
+    const categoria =
+        document.getElementById("categoria").value;
+
+    const descripcion =
+        document.getElementById("descripcion").value;
+
+    const precio =
+        document.getElementById("precio").value;
+
+    const ubicacion =
+        document.getElementById("ubicacion").value;
+
+    const inputImagen =
+        document.getElementById("imagen");
 
 
-    // Crear un servicio con esos datos
+    // ---------- OBTENER IMAGEN ----------
+
+    const archivoImagen =
+        inputImagen.files[0];
+
+
+    let rutaImagen = null;
+
+
+    // Si seleccionó una imagen,
+    // guardamos solamente su ruta dentro de img/
+
+    if (archivoImagen) {
+
+        rutaImagen =
+            "img/" + archivoImagen.name;
+    }
+
+
+    // ---------- CREAR SERVICIO ----------
+
     const nuevoServicio = {
+
         nombre: nombre,
+
         categoria: categoria,
+
         descripcion: descripcion,
+
         precio: precio,
-        ubicacion: ubicacion
+
+        ubicacion: ubicacion,
+
+        imagen: rutaImagen
     };
 
 
-    // Guardar el servicio temporalmente en el navegador
+    // ---------- OBTENER SERVICIOS ANTERIORES ----------
+
+    const serviciosGuardados =
+        localStorage.getItem("servicios");
+
+
+    let servicios = [];
+
+
+    if (serviciosGuardados) {
+
+        servicios =
+            JSON.parse(serviciosGuardados);
+    }
+
+
+    // ---------- AGREGAR SERVICIO ----------
+
+    servicios.push(nuevoServicio);
+
+
+    // ---------- GUARDAR ----------
+
     localStorage.setItem(
-        "nuevoServicio",
-        JSON.stringify(nuevoServicio)
+        "servicios",
+        JSON.stringify(servicios)
     );
 
 
-    // Volver al perfil
+    // ---------- VOLVER AL PERFIL ----------
+
     window.location.href = "perfil.html";
 
 });
