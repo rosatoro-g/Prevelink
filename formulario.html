@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Trabajador/a - Privélink</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="pantalla-dividida">
+    
+    
+    <section class="tarjeta-registro">
+      <h2>Registro</h2>
+      
+      <form id="registro-trabajadora">
+        <div class="campo">
+          <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+        </div>
+
+        <div class="campo">
+          <input type="text" id="apodo" name="apodo" placeholder="Nombre Artístico / Apodo" required>
+        </div>
+
+        <div class="campo">
+          <input type="number" id="edad" name="edad" placeholder="Edad" min="18" required>
+        </div>
+
+        <div class="campo">
+          <input type="tel" id="telefono" name="telefono" placeholder="Teléfono / WhatsApp" required>
+        </div>
+
+        <div class="campo">
+          <input type="text" id="comuna" name="comuna" placeholder="Comuna / Ubicación" required>
+        </div>
+
+        <div class="campo">
+          <textarea id="descripcion" name="descripcion" rows="2" placeholder="Sobre mí (Descripción)" required></textarea>
+        </div>
+
+        <div class="campo">
+          <input type="text" id="tarifas" name="tarifas" placeholder="Tarifas / Precios (Ej: $30.000/hr)">
+        </div>
+
+        <div class="campo-foto">
+          <label for="fotos">Subir Fotos</label>
+          <input type="file" id="fotos" name="fotos" accept="image/*" multiple>
+        </div>
+
+        <button type="submit" class="btn-enviar">Crear Perfil</button>
+      </form>
+    </section>
+
+    
+    <section class="lado-derecho">
+      <h1 class="marca-titulo">PRIVÉLINK</h1>
+    </section>
+
+  </main>
+
+</body>
+</html>
