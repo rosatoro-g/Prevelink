@@ -18,3 +18,15 @@ body{
 .bg-cobalto {
   background-color: #002FA7;
 }
+
+/* LIMITAR EL ANCHO DE LA TARJETA DEL CARRUSEL EN EL LADO AZUL */
+.card-creadora {
+  width: 100%;
+  max-width: 500px; /* Cambia a 500px o 550px según el ancho deseado */
+}
+
+#Mensaje-inicio{
+  color: #b59a63;
+  text-align: right;
+
+}
