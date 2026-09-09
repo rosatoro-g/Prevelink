@@ -15,27 +15,77 @@
     <div class="container-fluid vh-100 p-0">
         <div class="row g-0 h-100">
 
-            <!-- LADO IZQUIERDO CON COLOR DE FONDO -->
-            <header class="col-md-6 bg-cobalto p-4">
+            <!-- LADO IZQUIERDO AZUL -->
+            <header class="col-md-6 bg-cobalto p-4 d-flex flex-column justify-content-between">
+                <!-- Botón Volver arriba -->
                 <nav>
                     <ul class="list-unstyled m-0">
                         <li><a href="index.html" class="text-white text-decoration-none fw-bold">Volver</a></li>
                     </ul>
                 </nav>
+
+
+                <nav id="Mensaje-inicio">
+                    <h1 class=pregunta> "¿Que esperas para Unirte? "</h1>
+                    <p class="descripcion">
+                        Muchas te esperan para comenzar a compartir contigo grandes momentos. donde podras 
+                        ser la estrella de tu vida 
+                    </p>
+                    <p class="llamado">¡Encuentra la compañía perfecta para tu próximo evento!</p>
+                </nav>
+
+                <!-- CARRUSEL CENTRADO AL MEDIO -->
+                <div id="carruselCreadoras" class="carousel slide my-auto" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+
+                        <!-- DIAPOSITIVA 1 -->
+                        <div class="carousel-item active">
+                            <div>
+                                <img src="img/Banner. chicas.png" class="img-fluid w-100" alt="Creadora 1">
+                            </div>
+                        </div>
+
+                        <!-- DIAPOSITIVA 2 -->
+                        <div class="carousel-item">
+                            <div>
+                                <img src="img/bannar.chica.2.png" class="img-fluid w-100" alt="Creadora 2">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- CONTROLES ANTERIOR Y SIGUIENTE -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carruselCreadoras"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carruselCreadoras"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+                </div>
+
+                <!-- Div vacío para mantener el equilibrio del flexbox -->
+                <div></div>
             </header>
 
-            <!-- LADO DERECHO CON FORMULARIO CENTRADO -->
+            <!-- LADO DERECHO FORMULARIO -->
+
             <div class="col-md-6 d-flex justify-content-center align-items-center p-3">
                 <nav id="inicio-sesion">
                     <div>
                         <form class="px-4 py-3">
                             <div class="mb-3">
                                 <label for="exampleDropdownFormEmail1" class="form-label">Email address</label>
-                                <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+                                <input type="email" class="form-control" id="exampleDropdownFormEmail1"
+                                    placeholder="Ingresa tu Correo">
                             </div>
                             <div class="mb-3">
                                 <label for="exampleDropdownFormPassword1" class="form-label">Password</label>
-                                <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+                                <input type="password" class="form-control" id="exampleDropdownFormPassword1"
+                                    placeholder="Ingresa tu Contraseña">
                             </div>
                             <div class="mb-3">
                                 <div class="form-check">
@@ -45,7 +95,7 @@
                                     </label>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary w-100">Entrar</button>
+                            <button id="btn-inicio-sesion" class="btn btn-primary w-100">Entrar</button>
                         </form>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item text-center" href="#">Eres nuevo por aqui? Registrate </a>
@@ -58,6 +108,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js.rosa/inicio-sesion.js"></script>
 </body>
 
 </html>
