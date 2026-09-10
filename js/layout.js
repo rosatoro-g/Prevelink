@@ -31,9 +31,7 @@ class Layout {
                     PrivéLink
                 </span>
 
-                <p>
-                    © 2026 PrivéLink
-                </p>
+                <p> © 2026 PrivéLink · Todos los derechos reservados </p>
 
             </div>
         `;

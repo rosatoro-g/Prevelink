@@ -3,65 +3,163 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registro de Trabajador/a - Privélink</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <title>Registro - PRIVÉLINK</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <main class="pantalla-dividida">
+  <div class="contenedor-principal">
     
-    
-    <section class="tarjeta-registro">
-      <h2>Registro</h2>
-      
-      <form id="registro-trabajadora">
-        <div class="campo">
-          <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+    <div class="tarjeta-formulario">
+      <h2 class="titulo-form">Registro de Trabajador/a</h2>
+
+      <div class="pasos-header">
+        <div class="linea-progreso">
+          <div class="linea-fill" id="barra-fill"></div>
+        </div>
+        <div class="puntos-pasos">
+          <div class="paso-item activo" id="dot-1">
+            <span class="num">1</span>
+            <span class="label">Paso 1</span>
+          </div>
+          <div class="paso-item" id="dot-2">
+            <span class="num">2</span>
+            <span class="label">Paso 2</span>
+          </div>
+          <div class="paso-item" id="dot-3">
+            <span class="num">3</span>
+            <span class="label">Paso 3</span>
+          </div>
+        </div>
+      </div>
+
+      <form id="form-registro" novalidate>
+        
+        <div class="paso-contenido activo" id="paso-1">
+          <div class="grupo-input">
+            <label>Nombre completo</label>
+            <input type="text" id="nombre" placeholder="Escribe aquí..." required>
+            <span class="error-msg">Ingresa tu nombre completo.</span>
+          </div>
+
+          <div class="grupo-input">
+            <label>Nombre Artístico / Apodo</label>
+            <input type="text" id="apodo" placeholder="Escribe aquí..." required>
+            <span class="error-msg">Ingresa tu apodo o nombre artístico.</span>
+          </div>
+
+          <div class="grupo-input">
+            <label>Edad</label>
+            <input type="number" id="edad" placeholder="Debes ser mayor de 18 años" min="18" required>
+            <span class="error-msg">Debes ser mayor de 18 años.</span>
+          </div>
+
+          <div class="grupo-input">
+            <label>Teléfono / WhatsApp</label>
+            <input type="tel" id="telefono" placeholder="+56 9 1234 5678" required>
+            <span class="error-msg">Ingresa un número telefónico válido.</span>
+          </div>
+
+          <button type="button" class="btn-principal" onclick="siguientePaso(1)">Siguiente</button>
         </div>
 
-        <div class="campo">
-          <input type="text" id="apodo" name="apodo" placeholder="Nombre Artístico / Apodo" required>
+        <div class="paso-contenido" id="paso-2">
+          <div class="grupo-input">
+            <label>Comuna / Ubicación</label>
+            <input type="text" id="comuna" placeholder="Ej: Las Condes, Santiago" required>
+            <span class="error-msg">Ingresa tu comuna o ciudad.</span>
+          </div>
+
+          <div class="grupo-input">
+            <label>Tarifas / Precios</label>
+            <input type="text" id="tarifas" placeholder="Ej: $40.000 / hora" required>
+            <span class="error-msg">Especifica tus tarifas.</span>
+          </div>
+
+          <div class="grupo-input">
+            <label>Sobre mí (Descripción de tus servicios)</label>
+            <textarea id="descripcion" rows="3" placeholder="Escribe una breve descripción..." required></textarea>
+            <span class="error-msg">Escribe una breve descripción.</span>
+          </div>
+
+          <div class="botones-dobles">
+            <button type="button" class="btn-secundario" onclick="anteriorPaso(2)">Atrás</button>
+            <button type="button" class="btn-principal" onclick="siguientePaso(2)">Siguiente</button>
+          </div>
         </div>
 
-        <div class="campo">
-          <input type="number" id="edad" name="edad" placeholder="Edad" min="18" required>
+        <div class="paso-contenido" id="paso-3">
+          <div class="grupo-input">
+            <label>Fotos de Perfil</label>
+            <div class="upload-box">
+              <input type="file" id="fotos" accept="image/*" multiple required>
+              <p id="texto-upload">Adjunta al menos una foto de perfil</p>
+            </div>
+            <span class="error-msg">Adjunta al menos una foto de perfil.</span>
+          </div>
+
+          <div class="botones-dobles">
+            <button type="button" class="btn-secundario" onclick="anteriorPaso(3)">Atrás</button>
+            <button type="submit" class="btn-principal">Crear Perfil</button>
+          </div>
         </div>
 
-        <div class="campo">
-          <input type="tel" id="telefono" name="telefono" placeholder="Teléfono / WhatsApp" required>
-        </div>
-
-        <div class="campo">
-          <input type="text" id="comuna" name="comuna" placeholder="Comuna / Ubicación" required>
-        </div>
-
-        <div class="campo">
-          <textarea id="descripcion" name="descripcion" rows="2" placeholder="Sobre mí (Descripción)" required></textarea>
-        </div>
-
-        <div class="campo">
-          <input type="text" id="tarifas" name="tarifas" placeholder="Tarifas / Precios (Ej: $30.000/hr)">
-        </div>
-
-        <div class="campo-foto">
-          <label for="fotos">Subir Fotos</label>
-          <input type="file" id="fotos" name="fotos" accept="image/*" multiple>
-        </div>
-
-        <button type="submit" class="btn-enviar">Crear Perfil</button>
       </form>
-    </section>
+    </div>
 
-    
-    <section class="lado-derecho">
-      <h1 class="marca-titulo">PRIVÉLINK</h1>
-    </section>
+    <div class="tarjeta-derecha">
+      
+      <div class="header-marca">
+        <div class="logo-flor">
+          <img src="img/logo privelink.png" alt="PriveLink Logo" class="logo-img">
+        </div>
+        <p class="marca-slogan">CONEXIONES QUE ENRIQUECEN</p>
+      </div>
 
-  </main>
+      <div class="collage-servicios">
+        
+        <div class="card-mini c3">
+          <img src="img/servicio-cine.jpg" alt="Cine & Teatro">
+          <div class="card-body">
+            <span class="tag-servicio">Cine & Teatro</span>
+          </div>
+        </div>
+
+        <div class="card-mini c4">
+          <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=500&q=80" alt="Viajes & Escapadas">
+          <div class="card-body">
+            <span class="tag-servicio">Viajes & Escapadas</span>
+          </div>
+        </div>
+
+        <div class="card-mini c1 al-frente">
+          <img src="img/servicio-cena.jpg" alt="Cenas & Restobar">
+          <div class="card-body">
+            <span class="tag-servicio">Cenas & Restobar</span>
+          </div>
+        </div>
+
+        <div class="card-mini c2 al-frente">
+          <img src="img/servicio-evento.jpg" alt="Eventos & Galas">
+          <div class="card-body">
+            <span class="tag-servicio">Eventos & Galas</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="valores-footer">
+        <span class="frase-marca">"Más que compañía, experiencias."</span>
+      </div>
+
+    </div>
+
+  </div>
+  
+   <footer id="footer"></footer>
+
+  <script src="js/layout.js"></script>
+  <script src="script.js"></script>
 
 </body>
 </html>
