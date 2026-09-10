@@ -4,79 +4,72 @@
 <head>
     <title>PriveLink</title>
     <meta charset="utf-8">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="estilo.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="inici-admin.css">
 </head>
+
 <body>
 
-    <div class="container-fluid vh-100 p-0">
-        <div class="row g-0 h-100">
+    <a href="index.html" class="btn-volver">Volver</a>
 
-            <!-- LADO IZQUIERDO AZUL -->
-            <header class="col-md-6 bg-cobalto p-4 d-flex flex-column justify-content-between">
-                <nav>
-                    <ul class="list1-unstyled m-0">
-                        <li><a href="index.html" class="text-white text-decoration-none fw-bold">Volver</a></li>
-                    </ul>
-                </nav>
-                <nav id="Mensaje">
-                    <h1 class=pregunta> "Bienvenido "</h1>
-                    <p class="descripcion">
-                        Eres parte importante de PriveLink y sin ti 
-                        este mundo no existiria.
-                        inicia sesion y comienza a ayudarnos a crear 
-                        una gran experiencia para nuestros usuarios en este mundo
-                        Como Admin o Colaborador  
-                    </p>
-                    <p class="llamado">¡Genera ganancias con tu mejores habilidades!</p>
-                </nav>
-            </header>
+    <nav id="Mensaje">
+        <h1 class="pregunta">"Bienvenido "</h1>
+        <p class="descripcion">
+            Eres parte importante de PriveLink y sin ti 
+            este mundo no existiria.
+            Inicia sesion y comienza a ayudarnos a crear 
+            una gran experiencia para nuestros usuarios en este mundo
+            como Admin o Colaborador.
+        </p>
+        <p class="llamado">¡Genera ganancias con tu mejores habilidades!</p>
+    </nav>
+
+    <div class="contenedor-central">
+
+        <nav id="Logo-grande">
+            <img src="img/Privelink.png" alt="PriveLink Logo">
+        </nav>
+
+        <div class="card p-4 shadow-sm border-0 rounded-3">
+            
+
+            <div class="btn-group w-100 mb-3" role="group" aria-label="Seleccion de rol">
+                <input type="radio" class="btn-check" name="rolSelect" id="rolAdmin" value="admin" checked>
+                <label class="btn btn-outline-primary" for="rolAdmin">Admin</label>
+
+                <input type="radio" class="btn-check" name="rolSelect" id="rolColaborador" value="colaborador">
+                <label class="btn btn-outline-primary" for="rolColaborador">Colaborador</label>
+            </div>
+
+  
+            <form id="inicio-sesion">
+                <div class="mb-3">
+                    <label for="exampleDropdownFormEmail1" class="form-label text-dark">Email address</label>
+                    <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="Ingresa tu Correo">
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleDropdownFormPassword1" class="form-label text-dark">Password</label>
+                    <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Ingresa tu Contraseña">
+                </div>
+
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                    <label class="form-check-label text-dark" for="dropdownCheck">Remember me</label>
+                </div>
+
+                <button id="btn-inicio-sesion" type="submit" class="btn btn-primary w-100 py-2">Entrar</button>
+
+                <div class="text-center mt-3">
+                    <a href="#" class="d-block text-decoration-none text-muted mb-1 fs-6">¿Eres nuevo por aquí? Regístrate</a>
+                    <a href="#" class="d-block text-decoration-none text-muted fs-6">Olvidaste tu contraseña</a>
+                </div>
+            </form>
         </div>
-
-
-        <div class="card p-4 shadow-sm border-0 rounded-3" style="max-width: 400px; margin: 0 auto; background-color: #F7F6F2;">
-    <!-- SELECCIÓN DE ROL (ADMIN O COLABORADOR) -->
-    <div class="btn-group w-100 mb-3" role="group" aria-label="Seleccion de rol">
-        <input type="radio" class="btn-check" name="rolSelect" id="rolAdmin" value="admin" checked>
-        <label class="btn btn-outline-primary" for="rolAdmin">Admin</label>
-
-        <input type="radio" class="btn-check" name="rolSelect" id="rolColaborador" value="colaborador">
-        <label class="btn btn-outline-primary" for="rolColaborador">Colaborador</label>
     </div>
 
-    <nav id="inicio-sesion">
-    <form>
-        <div class="mb-3">
-            <label for="inputEmail" class="form-label text-dark">Email address</label>
-            <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="Ingresa tu Correo">
-        </div>
-
-        <div class="mb-3">
-            <label for="inputPassword" class="form-label text-dark">Password</label>
-            <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Ingresa tu Contraseña">
-        </div>
-
-        <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="dropdownCheck">
-            <label class="form-check-label text-dark" for="dropdownCheck">Remember me</label>
-        </div>
-
-        <button id="btn-inicio-sesion" type="submit" class="btn btn-primary w-100 py-2">Entrar</button>
-
-        <div class="text-center mt-3">
-            <a href="#" class="d-block text-decoration-none text-muted mb-1 fs-6">¿Eres nuevo por aquí? Regístrate</a>
-            <a href="#" class="d-block text-decoration-none text-muted fs-6">Olvidaste tu contraseña</a>
-        </div>
-    
-        </nav>
-    </form>
-</div>
-
-        
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js.rosa/inicio-sesion.js"></script>
-    
 
 </body>
 </html>
