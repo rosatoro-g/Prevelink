@@ -335,76 +335,14 @@ body {
   text-align: center;
 }
 
-.card-mini.c3 {
-  z-index: 1;
-  transform: translate(-75px, -35px) rotate(-6deg);
-  animation: flotar3 8s ease-in-out infinite alternate;
-}
-
-.card-mini.c4 {
-  z-index: 2;
-  transform: translate(75px, -25px) rotate(6deg);
-  animation: flotar4 6.5s ease-in-out infinite alternate;
-}
-
-.card-mini.c1.al-frente {
-  z-index: 5;
-  transform: translate(-65px, 35px) rotate(-3deg);
-  animation: flotar1 6s ease-in-out infinite alternate;
-}
-
-.card-mini.c2.al-frente {
-  z-index: 6;
-  transform: translate(65px, 45px) rotate(4deg);
-  animation: flotar2 7s ease-in-out infinite alternate;
-}
-
-.card-mini:hover {
-  z-index: 20 !important;
-  transform: scale(1.12) rotate(0deg) !important;
-  box-shadow: 0 16px 30px rgba(36, 59, 120, 0.22);
-  border-color: #B59A63;
-}
-
-.valores-footer {
-  z-index: 2;
-}
-
-.frase-marca {
-  font-family: 'Georgia', serif;
-  font-style: italic;
-  font-size: 14px;
-  color: #B59A63;
-}
-
-@keyframes flotar1 {
-  from { transform: translate(-65px, 35px) rotate(-3deg); }
-  to { transform: translate(-65px, 45px) rotate(0deg); }
-}
-
-@keyframes flotar2 {
-  from { transform: translate(65px, 45px) rotate(4deg); }
-  to { transform: translate(65px, 33px) rotate(7deg); }
-}
-
-@keyframes flotar3 {
-  from { transform: translate(-75px, -35px) rotate(-6deg); }
-  to { transform: translate(-75px, -23px) rotate(-3deg); }
-}
-
-@keyframes flotar4 {
-  from { transform: translate(75px, -25px) rotate(6deg); }
-  to { transform: translate(75px, -15px) rotate(3deg); }
-}
-
-@media (max-width: 880px) {
-  .contenedor-principal {
-    flex-direction: column;
+/* Adaptable a móviles (se apila verticalmente) */
+@media (max-width: 850px) {
+  .pantalla-dividida {
+    flex-direction: column-reverse;
   }
-  .tarjeta-formulario, .tarjeta-derecha {
-    width: 100%;
-  }
-  .tarjeta-derecha {
-    height: 440px;
+
+  .marca-titulo {
+    font-size: 48px;
+    margin-bottom: 20px;
   }
 }
