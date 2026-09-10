@@ -1,3 +1,57 @@
-body{
-    color:#F4EFEB ;
+/* 1. Fondo global */
+body {
+  background-color: #F4EFEB;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+
+#Logo-grande {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#Logo-grande img {
+  width: 280px; /* Tamaño reducido de la imagen */
+  max-width: 80%;
+  height: auto;
+  display: block;
+}
+
+
+.card {
+  max-width: 400px;
+  margin: 0 auto 40px auto; /* Centrado horizontal */
+}
+
+
+#Mensaje {
+  position: absolute;
+  top: 180px;
+  left: 40px;
+  max-width: 450px;
+}
+
+
+#Mensaje .pregunta {
+  color: #002FA7;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+
+#Mensaje .descripcion {
+  color: #002FA7;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+#Mensaje .llamado {
+  color: #002FA7;
+  font-size: 1.1rem;
+  font-weight: 700;
 }

@@ -11,7 +11,7 @@ body {
   font-family: sans-serif;
 }
 
-/* 1. LOGO ESQUINA IZQUIERDA (200px) */
+
 .header-top {
   position: absolute;
   top: 0px;
@@ -41,7 +41,7 @@ body {
   min-height: 100vh;
 }
 
-/* 3. LOGO GRANDE (700px) Y ANIMACIÓN */
+
 #nombre-grande {
   display: flex;
   justify-content: center;
@@ -61,7 +61,7 @@ body {
   100% { transform: translateY(0px); }
 }
 
-/* 4. SECCIÓN Y BOTONES PEQUEÑOS DEBAJO DEL LOGO */
+
 
 .botones {
   display: flex;
@@ -111,15 +111,13 @@ body {
 }
 
 
-/* Botones long in */
+
 
 .inicio {
  position: static
 }
 
-/* Estilo de boton de inicio admin*/
-/* BOTÓN LONG IN CON ESTILO AZUL COBALTO */
-/* Ajustes para el botón de desplegable personalizado */
+
 .inicio .dropdown-toggle::after {
   vertical-align: middle;
   margin-left: 8px;
@@ -132,13 +130,13 @@ body {
   color: #FFFFFF;
 }
 
-/* Color al pasar el ratón sobre las opciones del menú */
+
 .dropdown-menu .dropdown-item:hover {
   background-color: rgba(0, 47, 167, 0.08);
   color: #002FA7;
 }
 
-/* CONTENEDOR DEL MENSAJE */
+
 #mensaje {
  position: absolute;
   top: 220px; /* Misma distancia vertical desde arriba que el logo */
@@ -149,7 +147,7 @@ body {
   z-index: 10;
 }
 
-/* TÍTULO ESTILO LANDING */
+
 #mensaje .pregunta {
   color: #002FA7;
   font-size: 3.5rem;
@@ -159,7 +157,6 @@ body {
   letter-spacing: -1px;
 }
 
-/* PARÁGRAFO DESCRIPTIVO */
 #mensaje .descripcion {
   color: #002FA7;
   font-size: 1.1rem;
@@ -167,7 +164,6 @@ body {
   margin-bottom: 20px;
 }
 
-/* TEXTO DESTACADO DE LLAMADA */
 #mensaje .llamado {
   color: #002FA7;
   font-size: 1.2rem;
