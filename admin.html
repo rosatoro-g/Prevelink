@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Administración - PRIVÉLINK</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="contenedor-admin">
+    
+    <header class="admin-header">
+      <div class="brand-admin">
+        <img src="img/logo privelink.png" alt="PriveLink Logo" class="logo-admin">
+        <span class="badge-rol">Panel Administrador</span>
+      </div>
+      <div class="admin-user-info">
+        <span class="label-admin">Admin:</span>
+        <strong id="nombre-admin">Carlos Mendoza</strong>
+      </div>
+    </header>
+
+    <section class="toolbar-admin">
+      <div class="search-box">
+        <input type="text" id="input-buscar" placeholder="Buscar por Nombre, Apodo o ID..." onkeyup="filtrarTabla()">
+      </div>
+      <div class="stats-box">
+        <span>Total Colaboradores: <strong id="total-colaboradores">3</strong></span>
+      </div>
+    </section>
+
+    <section class="tabla-contenedor">
+      <table class="tabla-admin">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Colaborador</th>
+            <th>Teléfono / Comuna</th>
+            <th>Estado / Permisos</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="tabla-body">
+          
+          <tr data-id="PL-001">
+            <td><strong>#PL-001</strong></td>
+            <td>
+              <div class="user-cell">
+                <img src="img/sofia.jpg" alt="Foto" class="avatar-tabla">
+                <div>
+                  <p class="user-name">Sofía Silva</p>
+                  <span class="user-apodo">@Sofi69</span>
+                </div>
+              </div>
+            </td>
+            <td>
+              <p>+56 9 8765 4321</p>
+              <small>Valdivia</small>
+            </td>
+            <td>
+              <span class="status-tag activo">Activo</span>
+            </td>
+            <td>
+              <div class="acciones-cell">
+                <a href="perfil.html?id=PL-001" class="btn-tabla btn-ver" title="Ver Perfil">Ver Perfil</a>
+                <button class="btn-tabla btn-estado" onclick="alternarEstado(this)">Bloquear</button>
+                <button class="btn-tabla btn-eliminar" onclick="eliminarFila(this)">Eliminar</button>
+              </div>
+            </td>
+          </tr>
+
+          <tr data-id="PL-002">
+            <td><strong>#PL-002</strong></td>
+            <td>
+              <div class="user-cell">
+                <img src="img/amanda.jpg" alt="Foto" class="avatar-tabla">
+                <div>
+                  <p class="user-name">Amanda Rojas</p>
+                  <span class="user-apodo">@Amanda_xxx</span>
+                </div>
+              </div>
+            </td>
+            <td>
+              <p>+56 9 1234 5678</p>
+              <small>Valdivia</small>
+            </td>
+            <td>
+              <span class="status-tag activo">Activo</span>
+            </td>
+            <td>
+              <div class="acciones-cell">
+                <a href="perfil.html?id=PL-002" class="btn-tabla btn-ver" title="Ver Perfil">Ver Perfil</a>
+                <button class="btn-tabla btn-estado" onclick="alternarEstado(this)">Bloquear</button>
+                <button class="btn-tabla btn-eliminar" onclick="eliminarFila(this)">Eliminar</button>
+              </div>
+            </td>
+          </tr>
+
+          <tr data-id="PL-003">
+            <td><strong>#PL-003</strong></td>
+            <td>
+              <div class="user-cell">
+                <img src="img/emilia.jpg" alt="Foto" class="avatar-tabla">
+                <div>
+                  <p class="user-name">Emilia Rodríguez</p>
+                  <span class="user-apodo">@Emihub</span>
+                </div>
+              </div>
+            </td>
+            <td>
+              <p>+56 9 5555 4444</p>
+              <small>Temuco</small>
+            </td>
+            <td>
+              <span class="status-tag bloqueado">Bloqueado</span>
+            </td>
+            <td>
+              <div class="acciones-cell">
+                <a href="perfil.html?id=PL-003" class="btn-tabla btn-ver" title="Ver Perfil">Ver Perfil</a>
+                <button class="btn-tabla btn-estado desbloquear" onclick="alternarEstado(this)">Desbloquear</button>
+                <button class="btn-tabla btn-eliminar" onclick="eliminarFila(this)">Eliminar</button>
+              </div>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </section>
+
+  </div>
+
+  <script src="script-admin.js"></script>
+</body>
+</html>
